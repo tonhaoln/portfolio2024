@@ -1,0 +1,36 @@
+---
+// Icon.astro Component
+interface Props {
+  name: string; // The name of the icon to display
+}
+
+const { name } = Astro.props;
+---
+
+<!-- Define a switch-case-like structure using JavaScript's dynamic expressions -->
+{(() => {
+  switch (name) {
+    case 'arrow-left':
+        return (
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.8925 10.0001L4.10747 10.0001M4.10747 10.0001L10 15.8926M4.10747 10.0001L10 4.10758" stroke="black" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        );
+    case 'arrow-right':
+        return (
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.10747 10.0001L15.8925 10.0001M15.8925 10.0001L10 4.1076M15.8925 10.0001L9.99999 15.8927" stroke="black" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        );
+    case 'arrow-right-45':
+        return (
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.83301 14.1668L14.1663 5.8335M14.1663 5.8335H5.83301M14.1663 5.8335V14.1668" stroke="CurrentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        );
+    // Add more cases for other icons
+    
+    default:
+        return null; // Render nothing if the icon name doesn't match
+  }
+})()}

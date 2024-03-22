@@ -1,0 +1,35 @@
+---
+interface Props {
+    sectionId: string;
+}
+
+const { sectionId } = Astro.props;
+---
+
+
+    <div class="wrapper Hgroup" id={sectionId}>
+        <slot name="section" />    
+        <div class="body">
+            <slot name="body" />                
+        </div>
+    </div>
+
+
+<style>
+    .Hgroup{					
+		display: grid;
+		grid-template-columns: 1fr;		
+		grid-row-gap: 1rem;		
+		
+		@media (min-width: 992px) {			
+			grid-template-columns: 1fr 1.5fr;
+			grid-row-gap: 0;
+			grid-column-gap: 2.5rem;						
+		}	
+        .body{
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }		
+	}
+</style>

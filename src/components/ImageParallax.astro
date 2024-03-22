@@ -1,0 +1,24 @@
+---
+interface Props {
+  imageUrl: string;
+}
+
+const { imageUrl } = Astro.props;
+---
+
+<div class="parallax" style={{ '--image-url': `url(${imageUrl})` }}></div>
+
+<style>
+  .parallax {    
+    height: 55vh; /* Default height */
+    background-image: var(--image-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top center;
+
+    @media (min-width: 992px) {
+      height: 98vh; /* Height for larger screens */
+    }
+  }
+</style>

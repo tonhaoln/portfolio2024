@@ -1,0 +1,60 @@
+---
+import Icons from './Icons.astro';
+
+interface Props {
+  href: string;
+  text: string;
+  icon?: string;
+  className?: string;
+  target?: '_self' | '_blank' | '_parent' | '_top'; // Define possible values for target
+}
+
+const { href, text, icon, className = 'button', target } = Astro.props;
+---
+
+<a 
+  href={href} 
+  target={target} 
+  rel={target === '_blank' ? 'noopener noreferrer' : undefined} 
+  class={className}
+>
+  {text}
+  {icon && <Icons name={icon} />}
+</a>
+
+<style>
+	.button{		 	
+    	text-align: center;
+    	white-space: nowrap;
+    	background-color: transparent;
+    	border: 1px solid;    	
+    	border-radius: 40rem;    	
+    	padding: 0rem 1.5rem;    	
+    	line-height: 1;
+    	transition: all .3s;
+    	display: inline-block;
+		height: 46px;
+    	display: inline-flex;
+    	align-items: center;				
+        gap: .5rem;    
+		margin-top: var(--space-md);        
+
+		@media (min-width: 992px) {
+			font-size: 1.25rem;
+			height: 54px;			
+		}
+        
+        svg path{
+			transition: all .3s;
+		}
+		
+        &:hover{
+			background-color: #191919;
+			color: #ffffff;
+			
+			svg path{
+				stroke: #ffffff;
+			}
+		}		
+	}
+</style>

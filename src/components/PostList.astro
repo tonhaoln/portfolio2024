@@ -1,0 +1,26 @@
+---
+import { type CollectionEntry } from 'astro:content';
+import Post from './Post.astro';
+
+type Props = {
+    posts: CollectionEntry<'posts'>[];
+};
+
+const { posts } = Astro.props;
+---
+
+<div class="wrapper grid">
+    {posts.map((post) => <Post post={post} />)}
+</div>
+
+<style>
+    .grid{
+        display: flex;		
+		gap: 24px;
+		row-gap: 3rem;
+
+		@media (min-width: 992px) {
+			row-gap: 4rem;
+		}
+    }
+</style>

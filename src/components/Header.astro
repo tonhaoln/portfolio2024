@@ -1,0 +1,293 @@
+---
+import Button from "../components/Button.astro";
+---
+
+<header class="wrapper">
+    <div id="logo">
+        <a href="/">
+            <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <g clip-path="url(#clip0_120_18)">
+                    <path d="M0 0H24V24H0V0Z" fill="#191919"></path>
+                    <path
+                        class="hide"
+                        d="M-6.17164 24H-11.6262L-3.31506 -0.0751953H3.2445L11.5439 24H6.08933L0.058763 5.42637H-0.129326L-6.17164 24ZM-6.51255 14.5369H6.37146V18.5102H-6.51255V14.5369Z"
+                        fill="#F6F5F5"></path>
+                </g>
+                <defs>
+                    <clipPath id="clip0_120_18">
+                        <rect width="24" height="24" fill="white"></rect>
+                    </clipPath>
+                </defs>
+            </svg>
+            <span class="reveal">Antonio</span>'s Work</a
+        >
+    </div>
+
+    <nav>
+        <a href="/#experience">Experience</a>
+        <a href="/#work">Work</a>
+        <a href="/#about">About</a>
+    </nav>
+
+    <div class="navbar-button">
+        <Button href="/contact" text="Get in Touch" />
+        <div id="menu">
+            <div class="menu-icon_line-top"></div>
+            <div class="menu-icon_line-middle"></div>
+            <div class="menu-icon_line-bottom"></div>
+        </div>
+    </div>
+</header>
+
+<style>
+    header {
+        padding: 1.25rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        align-content: center;
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+        align-items: center;
+        background: var(--background);
+        margin-bottom: var(--space-lg);
+
+        @media (min-width: 992px) {
+            grid-template-columns: 0.25fr 1fr 0.25fr;
+        }
+    }
+
+    #logo {
+        font-size: 1.25rem;
+        margin-bottom: 0 !important;
+
+        a {
+            display: flex;
+            align-items: baseline;
+        }
+
+        span {
+            &.reveal {
+                display: inline-block;
+                max-width: 0;
+                overflow: hidden;
+                color: var(--text-color);
+                margin-left: 0.25rem;
+                transition: all 0.5s ease;
+                transform: translateX(-28px);
+            }
+        }
+
+        svg {
+            z-index: 2;
+            .hide {
+                transition: all 0.45s ease;
+            }
+        }
+
+        &:hover {
+            @media (min-width: 992px) {
+                span.reveal {
+                    max-width: 140px;
+                    transform: translateX(0);
+                }
+                svg .hide {
+                    transform: translateX(40px);
+                }
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+
+        /* Mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 5.5rem;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        max-height: 0;
+        overflow: hidden;
+        background: var(--background);
+        transition: all 0.5s ease;
+
+        &.collapsed {
+            overflow: auto;
+            max-height: 1000px;
+
+            a {
+                opacity: 1;
+
+                &:nth-child(1) {
+                    transition-delay: 0.06s;
+                }
+
+                &:nth-child(2) {
+                    transition-delay: 0.18s;
+                }
+
+                &:nth-child(3) {
+                    transition-delay: 0.3s;
+                }
+            }
+        }
+        /* End Mobile */
+
+        @media (min-width: 992px) {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 0;
+            height: auto;
+            max-height: inherit;
+        }
+
+        a {
+            padding: 0.5rem 1rem;
+            font-size: 3rem;
+            opacity: 0;
+            transition: opacity 0.4s cubic-bezier(0.58, 0.3, 0.005, 1);
+
+            &:nth-child(3) {
+                transition-delay: 0.06s;
+            }
+
+            &:nth-child(2) {
+                transition-delay: 0.18s;
+            }
+
+            &:nth-child(1) {
+                transition-delay: 0.3s;
+            }
+
+            @media (min-width: 992px) {
+                padding: 1rem 1.5rem;
+                font-size: 1.25rem;
+                opacity: 1;
+            }
+        }
+    }
+
+    .navbar-button {
+        display: flex;
+        justify-self: end;
+        align-items: center;
+        gap: 1rem;
+
+        .button {
+            margin: 0;
+        }
+    }
+
+    #menu {
+        width: 100%;
+        height: 48px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0;
+        padding-right: 0;
+        display: flex;
+        cursor: pointer;
+
+        .menu-icon_line-top,
+        .menu-icon_line-middle,
+        .menu-icon_line-bottom {
+            width: 24px;
+            height: 2px;
+            background-color: var(--text-color);
+            padding-bottom: 0;
+            padding-right: 0;
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+
+        .menu-icon_line-middle {
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+        &.open {
+            .menu-icon_line-top {
+                transform: translate3d(0px, 8px, 0px) scale3d(1, 1, 1)
+                    rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
+            }
+
+            .menu-icon_line-middle {
+                opacity: 0;
+            }
+
+            .menu-icon_line-bottom {
+                transform: translate3d(0px, -8px, 0px) scale3d(1, 1, 1)
+                    rotateX(0deg) rotateY(0deg) rotateZ(-45deg) skew(0deg, 0deg);
+            }
+        }
+
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menu = document.getElementById("menu");
+        if (menu) {
+            menu.addEventListener("click", function () {
+                const headerNav = document.querySelector("header > nav");
+                if (headerNav instanceof HTMLElement) {
+                    headerNav.classList.toggle("collapsed");
+                    menu.classList.toggle("open");
+                }
+            });
+        }
+
+        const navLinks = document.querySelectorAll("header > nav a");
+        navLinks.forEach((link) => {
+            link.addEventListener("click", function (event) {
+                if (!(event.currentTarget instanceof HTMLElement)) return;
+                const targetHref = event.currentTarget.getAttribute("href");
+                if (!targetHref) return;
+
+                const targetId = targetHref.split("/").pop();
+                if (!targetId) return;
+
+                // Check if we're already on the homepage and the target is an ID
+                if (
+                    window.location.pathname === "/" &&
+                    targetId.startsWith("#")
+                ) {
+                    event.preventDefault(); // Prevent the default anchor link behavior
+
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection instanceof HTMLElement) {
+                        // Perform UI adjustments
+                        const headerNav =
+                            document.querySelector("header > nav");
+                        if (headerNav instanceof HTMLElement) {
+                            headerNav.classList.remove("collapsed");
+                        }
+                        if (menu instanceof HTMLElement) {
+                            menu.classList.remove("open");
+                        }
+
+                        // Smooth scroll to the section
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 40,
+                            behavior: "smooth",
+                        });
+                    }
+                }
+            });
+        });
+    });
+</script>

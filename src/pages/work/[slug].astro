@@ -1,0 +1,49 @@
+---
+import { getCollection, getEntryBySlug } from "astro:content";
+import Main from "../../components/Main.astro";
+import Layout from "../../layouts/Layout.astro";
+
+export const getStaticPaths = async () => {
+    const posts = await getCollection("posts");
+    const paths = posts.map(post => {
+        return {
+            params: {
+                slug: post.slug,
+            },
+            props: {
+                posts,
+            },
+        };
+    });
+    return paths;
+};
+
+const { slug } = Astro.params;
+const post = await getEntryBySlug("posts", slug as string);
+
+// Ensure post is not undefined before trying to render its content
+if (!post) {
+    return Astro.redirect("/404")
+}
+
+const { Content } = await post.render();
+---
+
+<Layout title={post.data.title}>
+    <Main>
+        <img
+            src={post.data.image}
+            width={1014}
+            height={1014 / 1.6}
+            alt={post.data.title}
+        />
+
+        <div class="cats">
+            {post.data.category}
+        </div>
+        
+        <h3>{post.data.title}</h3>
+
+        <Content />
+    </Main>
+</Layout>
