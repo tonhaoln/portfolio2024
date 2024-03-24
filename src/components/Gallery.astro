@@ -50,4 +50,32 @@
     }
 </style>
 
-<script type="module" src="/js/gallery-animation.js" defer></script>
+
+<script>
+
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('.parallax-container img');
+
+  images.forEach(img => {
+    // Explicitly check if the attribute is not null before conversion; otherwise, default to 0
+    const attributeValue = img.getAttribute('data-speed');
+    const speed = attributeValue !== null ? +attributeValue : 0;
+
+    gsap.to(img, {
+      y: () => `-${window.scrollY * speed}px`,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: img,
+        start: 'top bottom',
+        scrub: true,
+      },
+    });
+  });
+});
+
+</script>
