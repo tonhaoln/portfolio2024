@@ -1,3 +1,9 @@
+
+---
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+---
+
 <div class="wrapper parallax-container">
     <img src="/../images/gallery01.jpg" alt="A dried Banksia flower in a 'TAKE IT SLOW' inscribed brown bottle on a wooden table, in a cafe setting" />
     <img src="/../images/gallery02.jpg" alt="A silhouette of Antonio's wife holding a child looking out at a mountainous landscape, with artistic hearts overlay" />
@@ -10,6 +16,7 @@
 <style>
     .parallax-container {
         display: grid;
+        
         grid-column-gap: 16px;
         grid-row-gap: 16px;
         grid-template-rows: auto auto auto;
@@ -51,11 +58,7 @@
 </style>
 
 
-<script>
-
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+<script>    
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -77,5 +80,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
 </script>
