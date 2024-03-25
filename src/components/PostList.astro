@@ -16,10 +16,11 @@ const { posts } = Astro.props;
 <style>
     .grid{
         display: flex;		
-		gap: 24px;
-		row-gap: 3rem;
-
+        flex-direction: column;
+		gap: 2.5rem;
+		
 		@media (min-width: 992px) {
+            flex-direction: row;
 			row-gap: 4rem;
 		}
     }

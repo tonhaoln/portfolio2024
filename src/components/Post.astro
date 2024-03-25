@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry } from "astro:content";
+import { Image } from 'astro:assets';
 import Icons from "../components/Icons.astro";
 
 type Props = {
@@ -13,7 +14,7 @@ const { post } = Astro.props;
     <a href={`/work/${post.slug}`}>
         
         <div class="frame-it">
-            <img
+            <Image
                 src={post.data.image}
                 width={1014}
                 height={1014 / 1.6}
