@@ -31,7 +31,7 @@ const { title,
 	<body>
 		<Header />
 		<slot />
-		<Footer /
+		<Footer />
 	</body>
 </html>
 
@@ -44,13 +44,17 @@ const { title,
 		--space-xsm: .75rem;
 		--space-sm: 1rem;	
 		--space-md: 1.5rem;	
-		--space-lg: 4rem;		
+		--space-lg: 4rem;
+		
+		--border-radius: .5rem;
 		
 		@media (min-width: 992px) {
 			--space-xsm: 1rem;
 			--space-sm: 1.5rem;	
 			--space-md: 3rem;	
 			--space-lg: 7.5rem;
+
+			--border-radius: 1rem;
 		}
 	}
 	
@@ -109,10 +113,33 @@ const { title,
 	}
 	
 	/* Image */
-	img{
+	img{		
 		max-width: 100%;
 		height: auto;		
 	}
+
+	.image-wrapper{
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-sm);
+	}
+	
+	.image-frame {
+		background-color: var(--grey);		
+		overflow: hidden;
+		padding: 10%;			
+		border-radius: var(--border-radius);
+	}
+
+	.image-group {        
+        display: grid;
+        grid-template-columns: 1fr 1fr;         
+        gap: var(--space-sm);
+
+		img{
+			border-radius: var(--border-radius);
+		}
+    }
 
 	/* Layout */
 	.wrapper{

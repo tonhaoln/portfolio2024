@@ -13,9 +13,9 @@ const { post } = Astro.props;
 <article> 
     <a href={`/work/${post.slug}`}>
         
-        <div class="frame-it">
+        <div class="image-frame">
             <Image
-                src={post.data.image}
+                src={post.data.thumb}
                 width={1014}
                 height={1014 / 1.6}
                 alt={post.data.title}
@@ -41,19 +41,7 @@ const { post } = Astro.props;
             display: flex;
 			flex-direction: column;
 			gap: var(--space-sm);
-            
-            .frame-it {
-                background-color: var(--grey);
-                border-radius: 10px;
-                overflow: hidden;
-                padding: 10%;
-                /*margin-bottom: 0.25rem;*/
-
-				@media (min-width: 992px) {
-					/*margin-bottom: 0.5rem;*/
-				}
-            }
-
+                        
             img{
                 transition: transform .3s ease;                
             }

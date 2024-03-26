@@ -1,6 +1,5 @@
 ---
 import { getCollection, getEntryBySlug } from "astro:content";
-import { Image } from 'astro:assets';
 import Main from "../../components/Main.astro";
 import Layout from "../../layouts/Layout.astro";
 import Hgroup from "../../components/Hgroup.astro";
@@ -29,26 +28,21 @@ if (!post) {
     return Astro.redirect("/404")
 }
 
-//const { Content } = await post.render();
+const { Content } = await post.render();
 ---
 
-<Layout title={post.data.title}>
+<Layout title={"Antonio Almeid - " + post.data.title} description={post.data.description} ogImage={post.data.ogimage}>
     <Main>
         
         <Hgroup sectionId="experience">			
             <p slot="section">{post.data.category}</p>
             <h1 class="h2" slot="body">{post.data.title}</h1>			
             <div slot="body">                
-                <Button slot="body" href="#" text="Visit Live Site" icon="arrow-right-45" target="_blank" />
+                <Button slot="body" href={post.data.url} text="Visit Live Site" icon="arrow-right-45" target="_blank" />
             </div>
         </Hgroup>
 
-        <Image
-            src={post.data.image}
-            width={1014}
-            height={1014 / 1.6}
-            alt={post.data.title}
-        />
+        <Content />
        
     </Main>
 </Layout>
