@@ -22,7 +22,7 @@ const { href, text, icon, className = 'button', target } = Astro.props;
   {icon && <Icons name={icon} />}
 </a>
 
-<style>
+<style lang="scss">
 	.button{		 	
     	text-align: center;
     	white-space: nowrap;
@@ -37,7 +37,7 @@ const { href, text, icon, className = 'button', target } = Astro.props;
     	display: inline-flex;
     	align-items: center;				
         gap: .5rem;    
-		margin-top: var(--space-md);        
+		margin-top: var(--space-sm);        
 
 		@media (min-width: 992px) {
 			font-size: 1.25rem;
@@ -54,6 +54,10 @@ const { href, text, icon, className = 'button', target } = Astro.props;
 			svg path{
 				stroke: #ffffff;
 			}
-		}		
+		}	
+		
+		&.mt-0{
+			margin-top: 0;
+		}
 	}
 </style>

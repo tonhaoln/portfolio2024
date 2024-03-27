@@ -13,59 +13,79 @@ const posts = await getCollection("posts");
 
 // Define a list of items to display
 const list = [
-	{ text: "UX/UI Designer" },
-	{ text: "Art Direction" },
-	{ text: "Web Development" },
-	{ text: "Accessibility Design" },
+	{ text: "UX/UI Design" },
 	{ text: "Prototyping" },
 	{ text: "Product Design" },
+	{ text: "Web Accessibility" },
+	{ text: "Web Development" },
+	{ text: "Art Direction" },
 ];
 ---
 
 <Layout
 	title="Antonio Almeida's Portfolio | Digital Design Expertise with 15 Years in Creative Agencies",
-	description="Explore the digital portfolio of Antonio Almeida, a designer with a Bachelor's from Billy Blue College, featuring projects for Aristocrat, OzHarvest, and WICKED.",
+	
+	description="Explore the digital portfolio of Antonio Almeida, a designer with a Bachelor's from Billy Blue College, featuring projects for Aristocrat, OzHarvest and WICKED.",
+	
 	ogImage="/images/work-oz-harvest-og.jpg"
 >
 	<Main>
 		
 		<Hgroup sectionId="experience">			
+			
 			<p slot="section">Experience</p>
+			
 			<h1 class="h2" slot="body">Nearly 15 years in digital and creative agencies, designing for wide variety of projects and brands</h1>			
-			<div slot="body">
-				<ListItem slot="body" items={list} />
+			
+			<ListItem slot="body" items={list} />
+				
+			<div slot="body" >
 				<Button href="https://www.linkedin.com/in/antonioal/" text="LinkedIn Profile" icon="arrow-right-45" target="_blank" />
 			</div>
+
 		</Hgroup>
 		
-		<div class="group">
-			<Hgroup sectionId="work">
-				<h2 class="h3" slot="section">Latest Work</h2>	
-			</Hgroup>
+		
+		<div class="group" id="work">
+			
+			<h2 class="wrapper h3" slot="section">Latest Work</h2>				
 		
 			<PostList posts={posts}/>
+
 		</div>
     
+		
 		<ImageParallax imageUrl="/images/work-oz-harvest-parallax.jpg" /> 
 
+		
 		<Hgroup sectionId="about">			
+			
 			<p slot="section">About Antonio</p>
+			
 			<h2 slot="body">Creative digital design expertise and life balance</h2>						
+			
 			<p slot="body">Antonio holds a Bachelor of Applied Design in Digital Communication and Media/Multimedia from Billy Blue College of Design at Torrens University Australia. His portfolio includes work for esteemed clients such as Aristocrat Leisure, OzHarvest, and WICKED the Musical.</p>
+			
 			<p slot="body">Almeida is recognised for his excellent collaboration and strategic skills, keen attention to detail, and a comprehensive understanding of visual design, user experience, user interface design, branding, and coding. As a member of the Interaction Design Foundation, he is always working on updating his knowledge and skills.</p>			
-			<div slot="body">	 
-				<p slot="body">In Australia, beyond his professional achievements and mastering a second language, he has found a work-life balance and purpose, enjoying spending time with his wife and 2-year-old son, surfing at the most beautiful beaches and savouring the best flat whites.</p>			
+			 
+			<p slot="body">In Australia, beyond his professional achievements and mastering a second language, he has found a work-life balance and purpose, enjoying spending time with his wife and 2-year-old son, surfing at the most beautiful beaches and savouring the best flat whites.</p>			
+			
+			<div slot="body">
 				<Button href="https://www.linkedin.com/in/antonioal/" text="LinkedIn Profile" icon="arrow-right-45" target="_blank" />
 			</div>
+
 		</Hgroup>
 
+		
 		<Gallery />
 		
+	
 	</Main>   
+
 
 </Layout>
 
-<style>
+<style lang="scss">
 	.group h2{
 		margin-bottom: var(--space-md);
 	}

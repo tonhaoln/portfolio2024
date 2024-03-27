@@ -6,16 +6,15 @@ interface Props {
 const { sectionId } = Astro.props;
 ---
 
-
-    <div class="wrapper Hgroup" id={sectionId}>
-        <slot name="section" />    
-        <div class="body">
-            <slot name="body" />                
-        </div>
+<div class="wrapper Hgroup" id={sectionId}>
+    <slot name="section" />    
+    <div class="body">
+        <slot name="body" />                
     </div>
+</div>
 
 
-<style>
+<style lang="scss">
     .Hgroup{					
 		display: grid;
 		grid-template-columns: 1fr;		

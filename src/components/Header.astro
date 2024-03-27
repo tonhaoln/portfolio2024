@@ -19,33 +19,41 @@ import Button from "../components/Button.astro";
                         d="M-6.17164 24H-11.6262L-3.31506 -0.0751953H3.2445L11.5439 24H6.08933L0.058763 5.42637H-0.129326L-6.17164 24ZM-6.51255 14.5369H6.37146V18.5102H-6.51255V14.5369Z"
                         fill="#F6F5F5"></path>
                 </g>
+                
                 <defs>
                     <clipPath id="clip0_120_18">
                         <rect width="24" height="24" fill="white"></rect>
                     </clipPath>
                 </defs>
             </svg>
-            <span class="reveal">Antonio</span>'s Work</a
-        >
+            
+            <span class="reveal">Antonio</span>'s Work
+        </a>
     </div>
 
+    
     <nav>
         <a href="/#experience">Experience</a>
         <a href="/#work">Work</a>
         <a href="/#about">About</a>
     </nav>
 
+    
     <div class="navbar-button">
-        <Button href="/contact" text="Get in Touch" />
+        
+        <Button className="button mt-0" href="/contact" text="Get in Touch" />
+        
         <div id="menu">
             <div class="menu-icon_line-top"></div>
             <div class="menu-icon_line-middle"></div>
             <div class="menu-icon_line-bottom"></div>
         </div>
+
     </div>
+    
 </header>
 
-<style>
+<style lang="scss">
     header {
         padding: 1.25rem 0;
         display: grid;
@@ -182,10 +190,6 @@ import Button from "../components/Button.astro";
         justify-self: end;
         align-items: center;
         gap: 1rem;
-
-        .button {
-            margin: 0;
-        }
     }
 
     #menu {

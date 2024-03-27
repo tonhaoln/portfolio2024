@@ -35,7 +35,7 @@ const { title,
 	</body>
 </html>
 
-<style is:global>
+<style lang="scss" is:global>
 	:root {
 		--background: #F6F5F5;
 		--text-color: #191919;
@@ -44,16 +44,15 @@ const { title,
 		--space-xsm: .75rem;
 		--space-sm: 1rem;	
 		--space-md: 1.5rem;	
-		--space-lg: 4rem;
+		--space-lg: 3.5rem;
 		
-		--border-radius: .5rem;
+		--border-radius: .25rem;
 		
 		@media (min-width: 992px) {
 			--space-xsm: 1rem;
 			--space-sm: 1.5rem;	
 			--space-md: 3rem;	
 			--space-lg: 7.5rem;
-
 			--border-radius: 1rem;
 		}
 	}
@@ -83,7 +82,7 @@ const { title,
 	
 	h2,
 	.h2 {
-		font-size: 2rem;								
+		font-size: 1.5rem;								
 		
 		@media (min-width: 992px) {
 			font-size: 3rem;
@@ -92,7 +91,8 @@ const { title,
 	
 	h3,
 	.h3 {
-		font-size: 1.5rem;								
+		font-size: 1rem;								
+		
 		@media (min-width: 992px) {
 			font-size: 1.5rem;
 		}
@@ -106,6 +106,10 @@ const { title,
 			font-size: 1.5rem;
 		}		
 	}	
+
+	p+h2{
+		margin-top: .5rem;
+	}
 	
 	a{
 		text-decoration: none;
@@ -148,5 +152,5 @@ const { title,
 			margin: 0 6rem;		
 		}
 	}
-
+	
 </style>

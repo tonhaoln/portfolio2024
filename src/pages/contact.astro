@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import Hgroup from "../components/Hgroup.astro";
+---
+
+<Layout title="Antonio Almeida's Portfolio | Digital Design Expertise with 15 Years in Creative Agencies" >
+	<Main>
+		
+		<Hgroup sectionId="contact">			
+			
+			<p slot="section">Contact</p>
+			
+			<h1 class="h2" slot="body">
+                Contact Antonio via email at <a href="mailto:hello@antoniowork.digital">hello@antoniowork.digital</a>, or use the form below to get in touch.
+            </h1>			
+			
+			<div slot="body" class="typeform" data-tf-live="01HRQYQSMBFY91PX5FQ0B8CAAZ"></div>
+							
+		</Hgroup>
+
+    </Main>
+
+</Layout>
+
+<style>
+   .h2 a{
+    background-color:#000;
+    color:#fff;
+   }
+   .typeform{
+    margin-top: var(--space-sm);        
+   }
+</style>
+
+<script>
+    // Ensure the Typeform script is added to the document
+    const addTypeformScript = () => {
+        const script = document.createElement("script");
+        script.src = "//embed.typeform.com/next/embed.js";
+        document.body.appendChild(script);
+    };
+
+    if (typeof document !== "undefined") {
+        // Only run this in the browser where `document` is defined
+        addTypeformScript();
+    }
+</script>
