@@ -1,13 +1,11 @@
 ---
-// Icon.astro Component
 interface Props {
-  name: string; // The name of the icon to display
+  name: string;
 }
 
 const { name } = Astro.props;
 ---
 
-<!-- Define a switch-case-like structure using JavaScript's dynamic expressions -->
 {(() => {
   switch (name) {
     case 'arrow-left':
@@ -28,9 +26,8 @@ const { name } = Astro.props;
             <path d="M5.83301 14.1668L14.1663 5.8335M14.1663 5.8335H5.83301M14.1663 5.8335V14.1668" stroke="CurrentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
         );
-    // Add more cases for other icons
     
     default:
-        return null; // Render nothing if the icon name doesn't match
+        return null; 
   }
 })()}

@@ -6,7 +6,7 @@ interface Props {
   text: string;
   icon?: string;
   className?: string;
-  target?: '_self' | '_blank' | '_parent' | '_top'; // Define possible values for target
+  target?: '_self' | '_blank' | '_parent' | '_top'; 
 }
 
 const { href, text, icon, className = 'button', target } = Astro.props;
