@@ -29,6 +29,11 @@ if (!post) {
 }
 
 const { Content } = await post.render();
+
+
+import Post from "../../components/PostRelated.astro";
+
+const { posts } = Astro.props;
 ---
 
 <Layout title={"Antonio Almeid - " + post.data.title} description={post.data.description} ogImage={post.data.ogimage}>
@@ -43,6 +48,30 @@ const { Content } = await post.render();
         </Hgroup>
 
         <Content />
+
+        <Hgroup sectionId="more-work">			
+            <p slot="section">More Work</p>
+            <ul slot="body"> 
+                {posts.map((post) => <Post post={post} />)}
+            </ul>
+        </Hgroup>
+
+        
        
     </Main>
 </Layout>
+
+<style lang="scss">
+    ul{
+        display: grid;
+        grid-template-columns: 1fr;		
+        list-style: none;    	
+        margin: 0;
+        padding: 0;
+
+        @media (min-width: 992px) {	
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 24px;    	
+        }		
+    }
+</style>

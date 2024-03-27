@@ -1,0 +1,24 @@
+---
+import { type CollectionEntry } from "astro:content";
+
+
+type Props = {
+    post: CollectionEntry<"posts">;
+};
+
+const { post } = Astro.props;
+---
+
+<li> 
+    <a href={`/work/${post.slug}`}>
+        <h3>{post.data.title}</h3>                
+    </a>
+</li>
+
+<style lang="scss">
+    li{
+        padding: var(--space-sm) 0;
+        border-bottom:1px solid #d9d9d9;
+        margin: 0;
+    }
+</style>
