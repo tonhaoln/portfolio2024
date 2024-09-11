@@ -20,7 +20,8 @@ const { posts } = Astro.props;
 		gap: 2.5rem;
 		
 		@media (min-width: 992px) {
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
 			row-gap: 4rem;
 		}
     }
