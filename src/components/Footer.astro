@@ -16,7 +16,7 @@ import Button from '../components/Button.astro';
 <style lang="scss">
     footer{
         color: #ffffff;             
-        background-image: url('/images/footer-bg.jpg');
+        background-image: url('${import.meta.env.BASE_URL}/images/footer-bg.jpg'); 
         background-repeat: no-repeat; 
 		background-size: cover; 
         margin-top: var(--space-lg);
