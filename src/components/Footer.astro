@@ -1,8 +1,14 @@
 ---
 import Button from '../components/Button.astro';
+
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const footerBg = `${base}images/footer-bg.jpg`;
 ---
 
-<footer>
+<footer style={`background-image: url('${footerBg}')`}>
     <div class="wrapper">
         <h2>Say Hello 👋</h2>
         <p>Get in touch to start the journey together.</p>
@@ -15,8 +21,7 @@ import Button from '../components/Button.astro';
 
 <style lang="scss">
     footer{
-        color: #ffffff;             
-        background-image: url('${import.meta.env.BASE_URL}/images/footer-bg.jpg'); 
+        color: #ffffff;                     
         background-repeat: no-repeat; 
 		background-size: cover; 
         margin-top: var(--space-lg);
