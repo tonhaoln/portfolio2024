@@ -33,15 +33,15 @@ import Button from "../components/Button.astro";
 
     
     <nav>
-        <a href="/#experience">Experience</a>
-        <a href="/#work">Work</a>
-        <a href="/#about">About</a>
+        <a href={`${import.meta.env.BASE_URL}#experience`}>Experience</a>
+        <a href={`${import.meta.env.BASE_URL}#work`}>Work</a>
+        <a href={`${import.meta.env.BASE_URL}#about`}>About</a>
     </nav>
 
     
     <div class="navbar-button">
         
-        <Button className="button mt-0" href="/contact" text="Get in Touch" />
+        <Button className="button mt-0" href={`${import.meta.env.BASE_URL}/contact`} text="Get in Touch" />
         
         <div id="menu">
             <div class="menu-icon_line-top"></div>
