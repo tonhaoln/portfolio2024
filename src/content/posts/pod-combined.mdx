@@ -1,0 +1,164 @@
+---
+title: "POD Combined: End-to-End Product Design & Development"
+description: Building a micro-SaaS POD profit calculator from concept to deployment. Designed, developed, and shipped solo with AI as co-pilot.
+category: Product Design & Development
+ogimage: /images/pod-og.jpg
+thumb: ./images/pod-thumb.jpg
+url: https://podcombined.com
+---
+
+import Hgroup from "../../components/Hgroup.astro";
+import Button from '../../components/Button.astro';
+import { Image } from 'astro:assets';
+
+import Image01 from "./images/pod-01.jpg";
+import Image02 from "./images/pod-02.jpg";
+import Image03 from "./images/pod-03.jpg";
+import Image04 from "./images/pod-04.jpg";
+import Image05 from "./images/pod-05.jpg";
+import Image06 from "./images/pod-06.jpg";
+import Image07 from "./images/pod-07.jpg";
+import Image08 from "./images/pod-08.jpg";
+import Image09 from "./images/pod-09.jpg";
+import ImageParallax from '../../components/ImageParallax.astro';
+
+<div class="wrapper image-wrapper">
+
+    <div class="image-frame">
+        <Image
+            src={Image01}
+            alt=""
+            width={2540}
+            height={1584}
+        />
+    </div>
+
+    <div class="image-group">
+        <Image
+            src={Image02}
+            alt=""
+            width={1544}
+            height={1928}
+        />
+
+        <Image
+            src={Image03}
+            alt=""
+            width={1544}
+            height={1928}
+        />
+    </div>
+</div>
+
+
+<Hgroup sectionId="overview">
+
+    <p slot="section">Overview</p>
+
+    <h2 slot="body">Shipping a Micro-SaaS End-to-End</h2>
+
+    <p slot="body">POD sellers manually compare profit margins across providers using spreadsheets—each calculation takes 15-20 minutes and becomes outdated as pricing changes. I built a calculator that shows real profit margins across 100+ provider-product-region combinations in under 30 seconds.</p>
+
+    <p slot="body">Designed, developed, and shipped solo with AI as a development partner, this project demonstrates end-to-end capability: from problem identification through interface design, implementation, and deployment.</p>
+
+</Hgroup>
+
+
+<ImageParallax imageUrl={`images/pod-parallax.jpg`} />
+
+
+<Hgroup sectionId="takeaways">
+
+    <p slot="section">Takeaway</p>
+
+    <h2 slot="body">Design Quality with AI Implementation</h2>
+
+    <p slot="body">To maintain professional design standards while using AI for code generation, I established the design system first—component library, design tokens, and interaction patterns—before any feature development. AI implemented within these constraints while I maintained final design decisions and quality review.</p>
+
+    <h2 slot="body">Specification-Driven Development</h2>
+
+    <p slot="body">Clear architectural specifications enabled AI to implement features correctly on first attempt. By defining what gets built—data structure, component requirements, integration points—before implementation, I reduced rework by ~70% and maintained system consistency.</p>
+
+    <h2 slot="body">Pragmatic Technical Decisions</h2>
+
+    <p slot="body">Optimized for simplicity over cleverness: CSV files instead of database complexity, USD-only storage with display-layer currency conversion, boring tech stack (React + TypeScript + Tailwind), and phased development where each stage shipped working functionality before moving forward.</p>
+
+    <h2 slot="body">Shipping as Learning</h2>
+
+    <p slot="body">Launched quickly to get real user feedback rather than building in isolation. Early testing revealed friction points assumptions would have missed. Email-gated export built newsletter list while providing value. Iteration based on actual usage data, not theory.</p>
+
+</Hgroup>
+
+
+<div class="wrapper image-wrapper">
+
+    <div class="image-frame">
+        <Image
+            src={Image04}
+            alt=""
+            width={2540}
+            height={1584}
+        />
+    </div>
+
+</div>
+
+
+<Hgroup sectionId="experience">
+
+    <p slot="section">Experience</p>
+
+    <h2 slot="body">Building Products End-to-End with AI Collaboration</h2>
+
+    <p slot="body">This project refined my workflow for building products end-to-end with AI collaboration. I focused on high-leverage work—product direction, architectural decisions, design system establishment, and quality standards—while AI accelerated implementation of components, validation logic, and integrations.</p>
+
+    <p slot="body">The result is a working product serving real users at podcombined.com, demonstrating that I can think, design, spec, build, and ship complete products independently. Key learning: AI is a force multiplier when you maintain clear direction and quality gates, but shipping fast and learning from real usage beats perfect planning.</p>
+
+</Hgroup>
+
+
+<div class="wrapper image-wrapper">
+
+    <div class="image-frame">
+        <Image
+            src={Image05}
+            alt=""
+            width={2540}
+            height={1584}
+        />
+    </div>
+
+    <div class="image-frame">
+        <Image
+            src={Image06}
+            alt=""
+            width={2540}
+            height={1584}
+        />
+    </div>
+
+    <div class="image-frame">
+        <Image
+            src={Image07}
+            alt=""
+            width={2540}
+            height={1584}
+        />
+    </div>
+
+    <div class="image-group">
+        <Image
+            src={Image08}
+            alt=""
+            width={1544}
+            height={1928}
+        />
+
+        <Image
+            src={Image09}
+            alt=""
+            width={1544}
+            height={1928}
+        />
+    </div>
+</div>
