@@ -6,7 +6,7 @@ import Hgroup from "../../components/Hgroup.astro";
 import Button from '../../components/Button.astro';
 
 export const getStaticPaths = async () => {
-    const posts = await getCollection("posts");
+    const posts = (await getCollection("posts")).sort((a, b) => a.data.order - b.data.order);
     const paths = posts.map(post => {
         return {
             params: {
