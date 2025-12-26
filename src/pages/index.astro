@@ -14,10 +14,10 @@ const posts = (await getCollection("posts")).sort((a, b) => a.data.order - b.dat
 // Define a list of items to display
 const list = [
 	{ text: "UX/UI Design" },
-	{ text: "Product Design" },
 	{ text: "Web Development" },
-	{ text: "Prototyping" },
-	{ text: "Web Accessibility" },
+	{ text: "Product Design" },
+	{ text: "Project Leadership" },
+	{ text: "Design Systems" },
 	{ text: "Art Direction" },
 ];
 ---
@@ -33,9 +33,9 @@ const list = [
 		
 		<Hgroup sectionId="experience">			
 			
-			<p slot="section">Experience</p>
+			<p slot="section">Antonio Almeida</p>
 			
-			<h1 class="h2" slot="body">Nearly 15 years in digital and creative agencies, designing for wide variety of projects and brands</h1>			
+			<h1 class="h2" slot="body">UX/UI Designer shipping digital products from concept to working code.</h1>			
 			
 			<ListItem slot="body" items={list} />
 				
@@ -62,13 +62,13 @@ const list = [
 			
 			<p slot="section">About Antonio</p>
 			
-			<h2 slot="body">Design, Strategy & Balance</h2>						
+			<h2 slot="body">Design, Code & Life in Byron Bay</h2>						
 			
-			<p slot="body">Antonio is a UX/UI designer with nearly 15 years of experience in web design, product design, and coding. He has worked with top clients like Aristocrat Leisure, OzHarvest, the Australian Youth Orchestra, and WICKED the Musical.</p>
+			<p slot="body">I design and build digital products — from concept to shipped code.</p>
 			
-			<p slot="body">A member of the Interaction Design Foundation, Antonio stays ahead in design trends while bringing a sharp eye for detail and problem-solving to every project.</p>			
+			<p slot="body">Lead Designer at Emptyhead Digital, working with arts and entertainment clients. I also build and ship independent products in my own time.</p>			
 			 
-			<p slot="body">Outside work, he enjoys life in Australia with his wife and young son—surfing, sipping great flat whites, and making the most of the coastal lifestyle.</p>			
+			<p slot="body">Based in Byron Bay, Australia with my wife and young son. When not working, I'm usually surfing or hunting down the best flat white.</p>			
 			
 			<div slot="body">
 				<Button href="https://www.linkedin.com/in/antonioal/" text="LinkedIn Profile" icon="arrow-right-45" target="_blank" />
