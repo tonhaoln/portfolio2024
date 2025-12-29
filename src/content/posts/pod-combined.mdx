@@ -1,5 +1,5 @@
 ---
-title: "POD Combined: Micro-SaaS Product Design & Development"
+title: "PODCombined: Print-on-Demand Profit Comparison Tool"
 description: A POD profit calculator built from concept to deployment, demonstrating end-to-end product capability with AI collaboration.
 category: Product Design & Development
 ogimage: /images/pod-og.jpg
@@ -54,37 +54,44 @@ import ImageParallax from '../../components/ImageParallax.astro';
 
 <Hgroup sectionId="overview">
 
-    <p slot="section">Overview</p>
+    <p slot="section">Problem & Solution</p>
 
-    <h2 slot="body">From Problem to Deployed Product</h2>
+    <h2 slot="body">15 Minutes to 30 Seconds</h2>
 
     <p slot="body">Print on Demand sellers manually compare profit margins across providers using spreadsheets. Each calculation takes 15-20 minutes and becomes outdated as pricing shifts.</p>
 
-    <p slot="body">PODCombined.com delivers real profit margins across 100+ provider-product-region combinations in under 30 seconds.</p>
-
-    <p slot="body">This project demonstrates end-to-end product capability. Problem framing, interface design, technical implementation, and deployment with AI as a development accelerator.</p>
-
+    <p slot="body">PODCombined delivers real profit margins across 100+ provider-product-region combinations in under 30 seconds.</p>
+    
 </Hgroup>
 
 
 <ImageParallax imageUrl={`images/pod-parallax.jpg`} />
 
 
-<Hgroup sectionId="takeaways">
+<Hgroup sectionId="design-development">
 
-    <p slot="section">Takeaway</p>
+    <p slot="section">Design & Development</p>
 
-    <h2 slot="body">Clear Problem Framing</h2>
+    <h2 slot="body">Foundation-First Development with AI Acceleration</h2>
 
-    <p slot="body">Sellers don't need another dashboard. They need faster margin comparison. This framing created clear constraints: solve one problem well and reduce 15-20 minute calculations to under 30 seconds.</p>
+    <p slot="body"><strong>Design</strong></p>
 
-    <h2 slot="body">Foundation-First Development</h2>
+    <ul slot="body">
+        <li>User interface and comparison tool layouts</li>
+        <li>Input flows and result visualisation</li>
+        <li>Responsive design across devices</li>
+    </ul>
 
-    <p slot="body">Design foundations came before features. Component library, design tokens, and interaction patterns created stable constraints for AI implementation. Technical decisions favored simplicity: CSV files instead of databases, USD-only storage with display conversion, proven stack, and phased development with working functionality at each stage.</p>
+    <p slot="body"><strong>Development</strong></p>
 
-    <h2 slot="body">Real Usage Drives Iteration</h2>
+    <ul slot="body">
+        <li>Frontend (React, Next.js)</li>
+        <li>Data scraping and JSON processing</li>
+        <li>Multi-currency support and conversion</li>
+        <li>Deployment to production</li>
+    </ul>
 
-    <p slot="body">Early release revealed friction points that planning missed. Users struggled with price input formatting and needed currency flexibility. Email-gated exports built the first newsletter list. Real behavior drove iteration, not assumptions.</p>
+    <p slot="body">Built in 3 weeks using AI as development accelerator. Design foundations and component architecture came first, creating stable constraints for implementation. Technical decisions favoured simplicity: CSV files over databases, USD-only storage with display conversion, proven stack over experimental tools.</p>
 
 </Hgroup>
 
@@ -105,13 +112,18 @@ import ImageParallax from '../../components/ImageParallax.astro';
 
 <Hgroup sectionId="experience">
 
-    <p slot="section">Experience</p>
+    <p slot="section">Outcome</p>
 
-    <h2 slot="body">Building with AI</h2>
+    <h2 slot="body">305 Users in First 2 Months</h2>
 
-    <p slot="body">
-        This project demonstrates the full product development cycle with AI as an implementation accelerator. Focus areas included product direction, problem framing, architecture, and design foundations. AI handled component implementation, validation logic, and data transformation. The result is a working product serving real sellers at <a href="https://podcombined.com" target="_blank" rel="noopener noreferrer">podcombined.com</a>.
-    </p>
+    <p slot="body"><b>Live:</b> <a href="https://www.podcombined.com" target="_blank" rel="noopener noreferrer">podcombined.com</a></p>
+
+    <p slot="body"><b>Timeline:</b> 3 weeks concept → live deployment</p>
+
+    <p slot="body"><b>Result:</b> 305 users in first 2 months, with sellers using it daily for margin calculations.</p>
+
+    <p slot="body"><b>Learning:</b> Shipping fast meant learning fast. The product improved because real people used it, revealing friction points that planning never would have anticipated. Early release beats perfect planning.</p>
+
 
 </Hgroup>
 
