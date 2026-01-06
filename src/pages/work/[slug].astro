@@ -39,14 +39,6 @@ const { posts } = Astro.props;
 <Layout title={"Antonio Almeid - " + post.data.title} description={post.data.description} ogImage={post.data.ogimage}>
     <Main>
         
-        <Hgroup sectionId="experience">			
-            <p slot="section">{post.data.category}</p>
-            <h1 class="h2" slot="body">{post.data.title}</h1>			
-            <div slot="body">                
-                <Button slot="body" href={post.data.url} text="Visit Live Site" icon="arrow-right-45" target="_blank" />
-            </div>
-        </Hgroup>
-
         <Content />
 
         <Hgroup sectionId="more-work">			
