@@ -1,7 +1,7 @@
 ---
-title: "Ticketing Professionals Australia: Website Redesign"
-description: Explore Antonio Almeida's UX/UI design and development for Ticketing Professionals Australia, featuring a dynamic website that showcases annual conferences, sponsors, and enhances audience engagement.
-category: UX/UI Design & Development
+title: "Ticketing Professionals Australia Website"
+description: A website redesign for a ticketing industry body—creating a central hub for annual conferences, sponsors, and professional community across Asia Pacific.
+category: UX/UI Design & Web Development
 ogimage: /images/work-ticketing-og.jpg
 thumb: ./images/work-ticketing-thumb.jpg
 url: https://ticketingaustralia.com.au/
@@ -23,6 +23,18 @@ import Image08 from "./images/work-ticketing-08.jpg";
 import Image09 from "./images/work-ticketing-09.jpg";
 import Image10 from "./images/work-ticketing-10.jpg";
 import ImageParallax from '../../components/ImageParallax.astro';
+
+<Hgroup sectionId="header">
+    <h1 slot="body">Ticketing Professionals Australia Website</h1>
+
+    <div slot="body" class="live-site">
+        <p><b>Live Site:</b> <a href="https://ticketingaustralia.com.au/" target="_blank">ticketingaustralia.com.au <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="open-in-new-tab-outline"><g fill="currentColor" fill-rule="evenodd" class="Vector" clip-rule="evenodd"><path d="M5 4a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5.263a1 1 0 1 1 2 0V19a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h5.017a1 1 0 1 1 0 2z"/><path d="M21.411 2.572a.963.963 0 0 1 0 1.36l-8.772 8.786a.96.96 0 0 1-1.358 0a.963.963 0 0 1 0-1.36l8.773-8.786a.96.96 0 0 1 1.357 0"/><path d="M21.04 2c.53 0 .96.43.96.962V8c0 .531-.47 1-1 1s-1-.469-1-1V4h-4c-.53 0-1-.469-1-1s.43-1 .96-1z"/></g></g></svg></a></p>
+    </div>
+
+    <p slot="body"><b>Result:</b> A redesigned website that serves as the central hub for Asia Pacific's ticketing industry community—showcasing annual conferences, sponsors, and professional resources.</p>
+
+    <p slot="body"><b>What was delivered:</b> Led UX/UI design and development for a ticketing industry body, creating clear pathways for conference attendees, sponsors, and members.</p>
+</Hgroup>
 
 <div class="wrapper image-wrapper">
 
@@ -53,15 +65,15 @@ import ImageParallax from '../../components/ImageParallax.astro';
 </div>
 
 
-<Hgroup sectionId="overview">			
-    
-    <p slot="section">Overview</p>
-    
-    <h2 slot="body">Revitalising Ticketing Professionals Australia's Online Presence</h2>			
-    
-    <p slot="body">Ticketing Professionals Australia, founded in 2017, aims to enhance professional growth and understanding in the Asia Pacific region's ticketing industry. To support their mission, the organisation needed a dynamic new website that would showcase their annual conferences, sponsors, and donors, while offering a seamless user experience for diverse audiences.</p>
-    
-    <p slot="body">Antonio, in his role as Lead Designer and Developer, spearheaded the UX/UI design and development to create a highly visual and user-friendly platform that clearly communicates key information and highlights the conference’s year-by-year evolution.</p>
+<Hgroup sectionId="brief">
+
+    <p slot="section">The Brief</p>
+
+    <h2 slot="body">Central Hub for a Professional Community</h2>
+
+    <p slot="body">Ticketing Professionals Australia supports professional growth in the Asia Pacific ticketing industry. They needed a website redesign that would showcase their annual conferences year-by-year, highlight sponsors and donors, and serve diverse audiences—from conference attendees to potential sponsors.</p>
+
+    <p slot="body">The challenge: create a visually engaging site that organises conference history clearly while guiding different user types toward relevant information.</p>
 
 </Hgroup>
 
@@ -69,21 +81,31 @@ import ImageParallax from '../../components/ImageParallax.astro';
 <ImageParallax imageUrl={`images/work-ticketing-parallax.jpg`} />
 
 
-<Hgroup sectionId="takeaways">			
+<Hgroup sectionId="delivered">
 
-    <p slot="section">Takeaway</p>
-    
-    <h2 slot="body">Showcasing Conference Highlights</h2>
-    
-    <p slot="body">The redesign prioritised visually engaging elements to effectively highlight each year’s conference, sponsors, and donors, ensuring the website serves as a central hub for all event-related information.</p>
-    
-    <h2 slot="body">Clear User Pathways</h2>
-    
-    <p slot="body">The new site structure was designed with intuitive navigation, providing a straightforward path for users to quickly find the information they need, such as event details, registration, and speaker information.</p>
-    
-    <h2 slot="body">Enhanced Audience Engagement</h2>
-    
-    <p slot="body">By focusing on a highly visual design, the site captures the dynamic nature of the ticketing industry and encourages interaction, fostering stronger connections with attendees, sponsors, and donors.</p>
+    <p slot="section">What I Delivered</p>
+
+    <h2 slot="body">Visual Conference Showcase with Clear Navigation</h2>
+
+    <p slot="body">I led the UX/UI design and development, creating a platform that highlights each year's conference while keeping navigation intuitive.</p>
+
+    <p slot="body"><strong>Design</strong></p>
+
+    <ul slot="body">
+        <li>Year-by-year conference archive structure</li>
+        <li>Clear user pathways for attendees, sponsors, and members</li>
+        <li>Visual hierarchy emphasising conference highlights and speakers</li>
+        <li>Responsive design across all devices</li>
+    </ul>
+
+    <p slot="body"><strong>Development</strong></p>
+
+    <ul slot="body">
+        <li>Custom frontend build (HTML, CSS, JavaScript)</li>
+        <li>Content management for easy conference updates</li>
+        <li>Sponsor and donor showcase sections</li>
+        <li>Event registration integration</li>
+    </ul>
 
 </Hgroup> 
 
@@ -102,13 +124,14 @@ import ImageParallax from '../../components/ImageParallax.astro';
 </div>
 
 
-<Hgroup sectionId="experience">			
-    
-    <p slot="section">Experience</p>
-    
-    <h2 slot="body">Crafting a Dynamic Digital Platform</h2>
+<Hgroup sectionId="outcome">
 
-    <p slot="body">The new website for Ticketing Professionals Australia was thoughtfully developed to cater to the needs of the ticketing community. Antonio led the UX/UI design and development to create a vibrant, engaging platform that not only showcases the annual conferences but also enhances user experience with clear navigation and visually compelling content. This redesign reflects the organisation's commitment to professional growth, innovation, and community engagement in the Asia Pacific region.</p>
+    <p slot="section">Outcome</p>
+
+    <h2 slot="body">Live Industry Platform</h2>
+
+    <p slot="body"><strong>Result:</strong> A redesigned website that serves as the central hub for Asia Pacific's ticketing industry—connecting professionals, showcasing annual conferences, and providing clear pathways for sponsors and attendees.</p>
+
 </Hgroup> 
 
 

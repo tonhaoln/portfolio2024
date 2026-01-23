@@ -1,7 +1,7 @@
 ---
-title: "The Academy: Jiu Jitsu for Growth, Discipline & Community in Byron Bay, Australia"
-description: Discover Antonio Almeida's UX/UI design and web development for Academy Byron Bay, enhancing the online experience for Brazilian Jiu-Jitsu enthusiasts.
-category: UX/UI Design & Development
+title: "The Academy Byron Bay Website"
+description: A website designed and built for a world champion BJJ black belt—the first project in an ongoing client relationship across three engagements.
+category: UX/UI Design & Web Development
 ogimage: /images/ta-og.jpg
 thumb: ./images/ta-thumb.jpg
 url: https://academybyronbay.com.au/
@@ -23,28 +23,42 @@ import Image08 from "./images/ta-08.jpg";
 import Image09 from "./images/ta-09.jpg";
 import ImageParallax from '../../components/ImageParallax.astro';
 
+<Hgroup sectionId="header">
+    <h1 slot="body">The Academy Byron Bay Website</h1>
+
+    <div slot="body" class="live-site">
+        <p><b>Live Site:</b> <a href="https://academybyronbay.com.au/" target="_blank">academybyronbay.com.au <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="open-in-new-tab-outline"><g fill="currentColor" fill-rule="evenodd" class="Vector" clip-rule="evenodd"><path d="M5 4a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5.263a1 1 0 1 1 2 0V19a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h5.017a1 1 0 1 1 0 2z"/><path d="M21.411 2.572a.963.963 0 0 1 0 1.36l-8.772 8.786a.96.96 0 0 1-1.358 0a.963.963 0 0 1 0-1.36l8.773-8.786a.96.96 0 0 1 1.357 0"/><path d="M21.04 2c.53 0 .96.43.96.962V8c0 .531-.47 1-1 1s-1-.469-1-1V4h-4c-.53 0-1-.469-1-1s.43-1 .96-1z"/></g></g></svg></a></p>
+    </div>
+
+    <p slot="body"><b>Timeline:</b> ~24 hours across 4 weeks</p>
+
+    <p slot="body"><b>Result:</b> The initial website led to two follow-on projects—a Shopify store build and server migration—demonstrating how focused delivery builds ongoing client relationships.</p>
+
+    <p slot="body"><b>What was delivered:</b> Designed and built a complete website for a world champion BJJ black belt (Thalison Soares, 200k+ followers)—the first project in an ongoing client relationship.</p>
+</Hgroup>
+
 <div class="wrapper image-wrapper">
 
     <div class="image-frame">
-        <Image  
+        <Image
             src={Image01}
-            alt="" 
+            alt=""
             width={2540}
             height={1584}
         />
     </div>
 
     <div class="image-group">
-        <Image 
+        <Image
             src={Image02}
-            alt="" 
+            alt=""
             width={1544}
             height={1928}
         />
 
-        <Image 
+        <Image
             src={Image03}
-            alt="" 
+            alt=""
             width={1544}
             height={1928}
         />
@@ -52,15 +66,15 @@ import ImageParallax from '../../components/ImageParallax.astro';
 </div>
 
 
-<Hgroup sectionId="overview">			
-    
-    <p slot="section">Overview</p>
-    
-    <h2 slot="body">Building a Digital Home for Jiu-Jitsu Excellence</h2>			
-    
-    <p slot="body">Academy Byron Bay is a leading Brazilian Jiu-Jitsu academy, where growth, discipline, and community come together. Under the guidance of world-class black belt Thalison Soares, the academy offers top-tier training for all levels in a friendly and inclusive environment.</p>
-    
-    <p slot="body">Led by Antonio, the project focused on creating a seamless UX/UI design and front-end development experience that reflects the academy’s strong identity while making it easy for students and visitors to navigate the site. A simple, custom CMS was also implemented, allowing easy updates to content and events for the academy’s team.</p>
+<Hgroup sectionId="brief">
+
+    <p slot="section">The Brief</p>
+
+    <h2 slot="body">Digital Home for a World-Class Academy</h2>
+
+    <p slot="body">The Academy Byron Bay is a Brazilian Jiu-Jitsu facility led by world champion black belt Thalison Soares (200k+ followers). They needed a website that reflected their world-class coaching while making it easy for new students to explore classes, book trials, and understand what makes the academy different.</p>
+
+    <p slot="body">The challenge: create a clean, professional presence that matches the academy's elite reputation while keeping the site easy for the team to update.</p>
 
 </Hgroup>
 
@@ -68,21 +82,30 @@ import ImageParallax from '../../components/ImageParallax.astro';
 <ImageParallax imageUrl={`images/ta-parallax.jpg`} />
 
 
-<Hgroup sectionId="takeaways">			
+<Hgroup sectionId="delivered">
 
-    <p slot="section">Takeaway</p>
-    
-    <h2 slot="body">Clear and Easy User Journeys</h2>
-    
-    <p slot="body">Streamlined pathways for new students, trial sign-ups, and memberships, ensuring a smooth experience.</p>
-    
-    <h2 slot="body">Engaging Visual Identity</h2>
-    
-    <p slot="body">A fresh, clean design that captures the academy’s spirit, elite coaching, and welcoming atmosphere.</p>
-    
-    <h2 slot="body">Optimised for Mobile</h2>
-    
-    <p slot="body">Fast, responsive, and user-friendly on all devices, making it easy for students to book trials and explore.</p>
+    <p slot="section">What I Delivered</p>
+
+    <h2 slot="body">End-to-End in ~24 Hours</h2>
+
+    <p slot="body">I designed and built the complete website across approximately 24 hours of work over 4 weeks.</p>
+
+    <p slot="body"><strong>Design</strong></p>
+
+    <ul slot="body">
+        <li>Clean visual identity reflecting elite coaching and welcoming atmosphere</li>
+        <li>Clear user journeys for new students, trial sign-ups, and memberships</li>
+        <li>Mobile-optimised layouts for on-the-go access</li>
+    </ul>
+
+    <p slot="body"><strong>Development</strong></p>
+
+    <ul slot="body">
+        <li>WordPress custom theme (HTML, CSS, JavaScript, PHP)</li>
+        <li>Simple custom CMS for easy content updates</li>
+        <li>Responsive design across all devices</li>
+        <li>Performance optimisation for fast loading</li>
+    </ul>
 
 </Hgroup> 
 
@@ -101,14 +124,16 @@ import ImageParallax from '../../components/ImageParallax.astro';
 </div>
 
 
-<Hgroup sectionId="experience">			
-    
-    <p slot="section">Experience</p>
-    
-    <h2 slot="body">Crafting a High-Impact Digital Experience for The Academy Byron Bay</h2>
+<Hgroup sectionId="outcome">
 
-    <p slot="body">The new website elevates Academy Byron Bay’s online presence, allowing potential students to easily explore class offerings, learn about the coaching team, and book trial sessions. Antonio’s focus on UX/UI design and front-end development ensured a visually captivating and functional platform that aligns with the academy’s world-class reputation.</p>
-    <p slot="body">The simple custom CMS makes it effortless for the team to manage content and keep the site up-to-date.</p>
+    <p slot="section">Outcome</p>
+
+    <h2 slot="body">One Website, Three Engagements</h2>
+
+    <p slot="body"><strong>Result:</strong> The initial website led to two follow-on projects: a Shopify store build and server migration. Quality delivery built trust.</p>
+
+    <p slot="body"><strong>Learning:</strong> Starting with a focused, well-executed project opened doors for ongoing work.</p>
+
 </Hgroup> 
 
 
