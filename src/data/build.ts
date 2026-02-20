@@ -8,7 +8,7 @@ export const build: BuildItem[] = [
   {
     name: 'AI Patterns',
     description: 'A catalogue of 16 named AI design patterns and 8 laws.',
-    url: '#', // replace with live URL
+    url: 'https://ai-patterns.antoniodesign.work/',
   },
   {
     name: 'Build vs. Buy',

@@ -1,0 +1,20 @@
+# Antonio Almeida
+
+> Product Designer and Developer based in Australia. Eleven years of client delivery, from design through production.
+
+My work starts with figuring out what to build. I've been building products solo with AI — shipping, breaking things, realising the hard decisions happen before the code.
+
+## Site structure
+
+- [Home](https://www.antoniodesign.work/): Overview of work, background, and writing.
+- [Projects](https://www.antoniodesign.work/project/): Selected client and product work.
+- [Articles](https://www.antoniodesign.work/articles/): Writing on design, product, and building with AI.
+
+## Background
+
+Currently Lead Designer & Developer at Emptyhead Digital, delivering end-to-end for major Australian organisations. Previously Senior UX Designer at WORK180, Lead Designer & Developer at ACMN, and Digital Designer at The Sydney Morning Herald.
+
+## Contact
+
+- Email: me.antonio7@gmail.com
+- LinkedIn: https://www.linkedin.com/in/antonioal/

@@ -17,8 +17,10 @@ const { Content } = await project.render();
 <ProjectLayout
   title={project.data.title}
   description={project.data.description}
-  date={project.data.date}
-  tags={project.data.tags}
+  intro={project.data.intro}
+  outcome={project.data.outcome}
+  slug={project.slug}
+  url={project.data.url}
 >
   <Content />
 </ProjectLayout>

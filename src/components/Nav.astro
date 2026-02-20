@@ -1,0 +1,39 @@
+---
+// Shared nav: LinkedIn (external) + Email (clipboard copy)
+---
+
+<nav>
+  <a href="https://www.linkedin.com/in/antonioal/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  <a href="#" id="email-nav">Email</a>
+</nav>
+
+<script>
+  document.getElementById('email-nav')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText('me.antonio7@gmail.com').catch(() => {});
+  });
+</script>
+
+<style>
+  nav {
+    position: absolute;
+    top: var(--section-gap);
+    right: 0;
+    display: flex;
+    gap: var(--col-gap);
+  }
+
+  nav a {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-regular);
+    font-size: 20px;
+    line-height: 1.8;
+    text-decoration: none;
+    color: var(--color-fg);
+    cursor: pointer;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+</style>

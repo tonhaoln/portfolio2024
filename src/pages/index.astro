@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '@layouts/Base.astro';
 import ProjectCard from '@components/ProjectCard.astro';
+import Nav from '@components/Nav.astro';
 import { experience } from '@data/experience';
 import { build } from '@data/build';
 
@@ -27,10 +28,7 @@ function formatArticleDate(date: Date): string {
   <div class="accent accent--top" aria-hidden="true"></div>
 
   <div class="page">
-    <nav>
-      <a href="https://www.linkedin.com/in/antonioal/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="#" id="email-nav">Email</a>
-    </nav>
+    <Nav />
 
     <main>
       <!-- Hero -->
@@ -146,10 +144,6 @@ function formatArticleDate(date: Date): string {
   }
 
   document.getElementById('email-copy')?.addEventListener('click', copyEmail);
-  document.getElementById('email-nav')?.addEventListener('click', (e) => {
-    e.preventDefault();
-    copyEmail();
-  });
 </script>
 
 <style>
@@ -171,29 +165,6 @@ function formatArticleDate(date: Date): string {
     max-width: var(--layout-width);
     margin: 0 auto;
     padding: var(--section-gap) 0 var(--section-gap);
-  }
-
-  /* ── Nav ──────────────────────────────────────── */
-  nav {
-    position: absolute;
-    top: var(--section-gap);
-    right: 0;
-    display: flex;
-    gap: var(--col-gap);
-  }
-
-  nav a {
-    font-family: var(--font-sans);
-    font-weight: var(--weight-regular);
-    font-size: 20px;
-    line-height: 1.8;
-    text-decoration: none;
-    color: var(--color-fg);
-    cursor: pointer;
-  }
-
-  nav a:hover {
-    text-decoration: underline;
   }
 
   /* ── Main ─────────────────────────────────────── */

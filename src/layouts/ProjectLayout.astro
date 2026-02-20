@@ -1,43 +1,77 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from './Base.astro';
+import Nav from '@components/Nav.astro';
 
 interface Props {
   title: string;
   description: string;
-  date: Date;
-  tags?: string[];
+  intro: string;
+  outcome: string;
+  slug: string;
+  url?: string;
 }
 
-const { title, description, date, tags } = Astro.props;
+const { title, description, intro, outcome, slug, url } = Astro.props;
 
-const formattedDate = date.toLocaleDateString('en-AU', {
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
-});
+const allProjects = await getCollection('projects');
+const moreProjects = allProjects
+  .filter((p) => p.slug !== slug)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
-<Base title={`${title} — Antonio Almeida`} description={description}>
+<Base title={`${title} — Antonio Almeida`} description={description} ogType="article">
   <div class="accent accent--top" aria-hidden="true"></div>
 
   <div class="page">
+    <Nav />
+
     <main>
       <article>
-        <header>
-          <hr />
-          <div class="meta">
-            <time datetime={date.toISOString()}>{formattedDate}</time>
-            {tags && tags.length > 0 && (
-              <ul class="tags">
-                {tags.map((tag) => <li>{tag}</li>)}
-              </ul>
+
+        <!-- Hero -->
+        <div class="hero">
+          <a href="/" class="name-link">Antonio Almeida</a>
+          <h1>{title}</h1>
+          <p class="outcome">{outcome}</p>
+          <div class="intro-block">
+            <p class="intro">{intro}</p>
+            {url && (
+              <a href={url} class="visit-link" target="_blank" rel="noopener noreferrer">Visit →</a>
             )}
           </div>
-          <h1>{title}</h1>
-        </header>
+        </div>
+
+        <!-- Markdown content -->
         <div class="content">
           <slot />
         </div>
+
+        <!-- More Projects -->
+        {moreProjects.length > 0 && (
+          <div class="more-projects">
+            <hr />
+            <h2>More Projects</h2>
+            <ul>
+              {moreProjects.map((p) => (
+                <li>
+                  <a href={`/project/${p.slug}`}>
+                    <span class="more-name">{p.data.title}—</span>
+                    <span class="more-desc">{p.data.description}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <!-- Footer -->
+        <footer>
+          <hr />
+          <a href="/" class="home-link">Home →</a>
+          <p>Antonio Almeida &copy; 2026</p>
+        </footer>
+
       </article>
     </main>
   </div>
@@ -58,12 +92,128 @@ const formattedDate = date.toLocaleDateString('en-AU', {
   .accent--bottom { bottom: 0; }
 
   .page {
+    position: relative;
     max-width: var(--layout-width);
     margin: 0 auto;
     padding: var(--section-gap) 0;
   }
 
-  article {
+  /* ── Hero ─────────────────────────────────────── */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-gap);
+  }
+
+  .name-link {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-medium);
+    font-size: 20px;
+    line-height: 1.8;
+    text-decoration: none;
+    color: var(--color-fg);
+  }
+
+  .name-link:hover {
+    text-decoration: underline;
+  }
+
+  h1 {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-medium);
+    font-size: 44px;
+    line-height: 1.3;
+    color: var(--color-fg);
+    max-width: var(--content-width);
+  }
+
+  .outcome {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-medium);
+    font-size: 28px;
+    line-height: 1.1;
+    color: var(--color-fg);
+    max-width: var(--content-width);
+  }
+
+  .intro-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--col-gap);
+    max-width: var(--content-width);
+  }
+
+  .intro {
+    font-family: var(--font-serif);
+    font-weight: var(--weight-regular);
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--color-fg);
+  }
+
+  .visit-link {
+    font-family: var(--font-serif);
+    font-weight: var(--weight-regular);
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-accent);
+  }
+
+  /* ── Content (Markdown) ───────────────────────── */
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Each h2 becomes a section: divider line + 56px breathing room to the heading text */
+  .content :global(h2) {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-medium);
+    font-size: 28px;
+    line-height: normal;
+    color: var(--color-fg);
+    border-top: 1px solid var(--color-divider);
+    padding-top: var(--section-gap);
+    margin-top: var(--section-gap);
+    margin-bottom: 0;
+  }
+
+  .content :global(p) {
+    font-family: var(--font-serif);
+    font-weight: var(--weight-regular);
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--color-fg);
+    max-width: var(--content-width);
+    margin-bottom: var(--row-gap);
+  }
+
+  .content :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  /* Full-width images */
+  .content :global(p:has(> img)) {
+    max-width: 100%;
+  }
+
+  .content :global(img),
+  .content :global(video) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .content :global(a) {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+
+  /* ── More Projects ────────────────────────────── */
+  .more-projects {
     display: flex;
     flex-direction: column;
     gap: var(--section-gap);
@@ -75,72 +225,82 @@ const formattedDate = date.toLocaleDateString('en-AU', {
     margin: 0;
   }
 
-  header {
-    display: flex;
-    flex-direction: column;
-    gap: var(--row-gap);
-  }
-
-  .meta {
-    display: flex;
-    align-items: center;
-    gap: var(--col-gap);
-  }
-
-  time {
-    font-family: var(--font-sans);
-    font-weight: var(--weight-regular);
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--color-fg);
-  }
-
-  .tags {
-    list-style: none;
-    display: flex;
-    gap: var(--col-gap);
-  }
-
-  .tags li {
-    font-family: var(--font-sans);
-    font-weight: var(--weight-regular);
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--color-fg);
-  }
-
-  h1 {
-    font-family: var(--font-sans);
-    font-weight: var(--weight-medium);
-    font-size: 44px;
-    line-height: 1.1;
-    color: var(--color-fg);
-    max-width: var(--content-width);
-  }
-
-  .content {
-    max-width: var(--content-width);
-    font-family: var(--font-serif);
-    font-weight: var(--weight-regular);
-    font-size: 20px;
-    line-height: 1.8;
-    color: var(--color-fg);
-  }
-
-  .content :global(h2) {
+  h2 {
     font-family: var(--font-sans);
     font-weight: var(--weight-medium);
     font-size: 28px;
     line-height: normal;
-    margin-block: var(--row-gap) var(--col-gap);
+    color: var(--color-fg);
   }
 
-  .content :global(p) {
-    margin-bottom: var(--col-gap);
+  .more-projects ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--row-gap);
+    max-width: 640px;
   }
 
-  .content :global(a) {
+  .more-projects li {
+    position: relative;
+  }
+
+  .more-projects li::before {
+    content: '';
+    position: absolute;
+    inset-block: -8px;
+    left: calc((var(--layout-width) - 100vw) / 2);
+    width: 100vw;
+    background: var(--color-hover-bg);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+  }
+
+  .more-projects li:hover::before {
+    opacity: 1;
+  }
+
+  .more-projects a {
+    font-family: var(--font-sans);
+    font-size: 20px;
+    line-height: 1.8;
+    text-decoration: none;
+    color: var(--color-fg);
+  }
+
+  .more-name {
+    font-weight: var(--weight-medium);
+  }
+
+  .more-desc {
+    font-weight: var(--weight-regular);
+  }
+
+  /* ── Footer ───────────────────────────────────── */
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-gap);
+    align-items: flex-start;
+  }
+
+  .home-link {
+    display: inline;
+    font-family: var(--font-serif);
+    font-weight: var(--weight-regular);
+    font-size: 20px;
+    line-height: 1.8;
     color: var(--color-accent);
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-accent);
+  }
+
+  footer p {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-regular);
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--color-fg);
   }
 </style>

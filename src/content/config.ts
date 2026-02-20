@@ -4,8 +4,11 @@ const projects = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    description: z.string(),
+    description: z.string(),   // SEO meta
+    intro: z.string(),          // hero body text
+    outcome: z.string(),        // bold stat line in hero
     date: z.coerce.date(),
+    url: z.string().optional(),
     tags: z.array(z.string()).optional(),
     coverImage: z.string().optional(),
     thumbBg: z.string().optional(),
