@@ -4,16 +4,14 @@ interface Props {
   description: string;
   slug: string;
   coverImage?: string;
-  thumbBg?: string;
 }
 
-const { title, description, slug, coverImage, thumbBg } = Astro.props;
-const bg = thumbBg ?? 'var(--color-divider)';
+const { title, description, slug, coverImage } = Astro.props;
 ---
 
 <article class="project-card">
   <a href={`/project/${slug}`} class="card-link" aria-label={`See the work: ${title}`}>
-    <div class="thumb" style={`background-color: ${bg};`}>
+    <div class="thumb">
       {coverImage && (
         <img src={coverImage} alt="" aria-hidden="true" loading="lazy" />
       )}

@@ -52,7 +52,6 @@ const moreProjects = allProjects
         <!-- More Projects -->
         {moreProjects.length > 0 && (
           <div class="more-projects">
-            <hr />
             <h2>More Projects</h2>
             <ul>
               {moreProjects.map((p) => (
@@ -233,6 +232,36 @@ const moreProjects = allProjects
     height: auto;
   }
 
+  .content :global(ul) {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--row-gap);
+    max-width: var(--content-width);
+    margin-top: var(--row-gap);
+  }
+
+  .content :global(li) {
+    position: relative;
+    padding-left: 1.25em;
+    font-family: var(--font-serif);
+    font-weight: var(--weight-regular);
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--color-fg);
+  }
+
+  .content :global(li::before) {
+    content: '—';
+    position: absolute;
+    left: 0;
+  }
+
+  .content :global(li strong) {
+    font-weight: var(--weight-medium);
+    font-family: var(--font-sans);
+  }
+
   .content :global(a) {
     color: var(--color-accent);
     text-decoration: underline;
@@ -244,9 +273,12 @@ const moreProjects = allProjects
     flex-direction: column;
     gap: var(--section-gap);
     margin-top: var(--section-gap);
+    border-top: 1px solid var(--color-divider);
+    padding-top: var(--section-gap);
   }
 
   hr {
+    width: 100%;
     border: none;
     border-top: 1px solid var(--color-divider);
     margin: 0;

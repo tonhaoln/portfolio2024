@@ -5,7 +5,6 @@ intro: '100+ employer profiles, all with different content. One template that ha
 outcome: '275% increase in organic traffic.'
 date: '2023-06-01'
 url: ''
-thumbBg: '#BEDEAF'
 coverImage: '/images/w180-thumb.png'
 tags: ['ux', 'design']
 ---
