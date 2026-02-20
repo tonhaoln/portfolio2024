@@ -201,18 +201,29 @@ const moreProjects = allProjects
     line-height: 1.8;
     color: var(--color-fg);
     max-width: var(--content-width);
-    margin-bottom: var(--row-gap);
   }
 
-  .content :global(p:last-child) {
-    margin-bottom: 0;
+  .content :global(p + p) {
+    margin-top: var(--row-gap);
   }
 
-  /* Full-width images and video */
+  /* Images/video: always section-gap above — wins over p+p by specificity */
   .content :global(p:has(> img)),
   .content :global(p:has(> video)) {
     max-width: 100%;
-    margin-bottom: 0;
+    margin-top: var(--section-gap);
+  }
+
+  /* After h2: h2's margin-bottom handles the gap, zero out image's top */
+  .content :global(h2 + p:has(> img)),
+  .content :global(h2 + p:has(> video)) {
+    margin-top: 0;
+  }
+
+  /* Text after image: also section-gap */
+  .content :global(p:has(> img) + p),
+  .content :global(p:has(> video) + p) {
+    margin-top: var(--section-gap);
   }
 
   .content :global(img),
