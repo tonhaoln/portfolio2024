@@ -1,0 +1,146 @@
+---
+import Base from './Base.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+  tags?: string[];
+}
+
+const { title, description, date, tags } = Astro.props;
+
+const formattedDate = date.toLocaleDateString('en-AU', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<Base title={`${title} — Antonio Almeida`} description={description}>
+  <div class="accent accent--top" aria-hidden="true"></div>
+
+  <div class="page">
+    <main>
+      <article>
+        <header>
+          <hr />
+          <div class="meta">
+            <time datetime={date.toISOString()}>{formattedDate}</time>
+            {tags && tags.length > 0 && (
+              <ul class="tags">
+                {tags.map((tag) => <li>{tag}</li>)}
+              </ul>
+            )}
+          </div>
+          <h1>{title}</h1>
+        </header>
+        <div class="content">
+          <slot />
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <div class="accent accent--bottom" aria-hidden="true"></div>
+</Base>
+
+<style>
+  .accent {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-accent);
+    z-index: 100;
+  }
+  .accent--top { top: 0; }
+  .accent--bottom { bottom: 0; }
+
+  .page {
+    max-width: var(--layout-width);
+    margin: 0 auto;
+    padding: var(--section-gap) 0;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-gap);
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--color-divider);
+    margin: 0;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--row-gap);
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: var(--col-gap);
+  }
+
+  time {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-regular);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-fg);
+  }
+
+  .tags {
+    list-style: none;
+    display: flex;
+    gap: var(--col-gap);
+  }
+
+  .tags li {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-regular);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-fg);
+  }
+
+  h1 {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-medium);
+    font-size: 44px;
+    line-height: 1.1;
+    color: var(--color-fg);
+    max-width: var(--content-width);
+  }
+
+  .content {
+    max-width: var(--content-width);
+    font-family: var(--font-serif);
+    font-weight: var(--weight-regular);
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--color-fg);
+  }
+
+  .content :global(h2) {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-medium);
+    font-size: 28px;
+    line-height: normal;
+    margin-block: var(--row-gap) var(--col-gap);
+  }
+
+  .content :global(p) {
+    margin-bottom: var(--col-gap);
+  }
+
+  .content :global(a) {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+</style>

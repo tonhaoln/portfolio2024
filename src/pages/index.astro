@@ -1,0 +1,477 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '@layouts/Base.astro';
+import ProjectCard from '@components/ProjectCard.astro';
+import { experience } from '@data/experience';
+import { build } from '@data/build';
+
+const projects = (await getCollection('projects')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const articles = (await getCollection('articles')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+function formatArticleDate(date: Date): string {
+  return date
+    .toLocaleDateString('en-AU', { day: '2-digit', month: '2-digit', year: '2-digit' })
+    .replace(/\//g, '.');
+}
+---
+
+<Base
+  title="Antonio Almeida — Product Designer & Developer"
+  description="Eleven years of client delivery, from design through production."
+>
+  <div class="accent accent--top" aria-hidden="true"></div>
+
+  <div class="page">
+    <nav>
+      <a href="https://www.linkedin.com/in/antonioal/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="#" id="email-nav">Email</a>
+    </nav>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-identity">
+          <div class="hero-name">
+            <p class="name">Antonio Almeida</p>
+            <p class="title">Product Designer and Developer</p>
+          </div>
+          <div class="profile-photo">
+            <img src="/images/profile.png" alt="Antonio Almeida" />
+          </div>
+        </div>
+
+        <h1>Eleven years of client delivery, from design through production</h1>
+
+        <p class="hero-body">
+          My work starts with figuring out what to build. Over the last year I've been building
+          products solo with AI. Shipping, breaking things. Realising the hard decisions happen
+          before the code.
+        </p>
+
+        <p class="email-cta">
+          Click <button id="email-copy" class="copy-link">here</button> to copy my email.
+        </p>
+      </section>
+
+      <!-- Projects -->
+      <section class="section">
+        <hr />
+        <h2>Projects</h2>
+        <div class="project-grid">
+          {projects.map((project) => (
+            <ProjectCard
+              title={project.data.title}
+              description={project.data.description}
+              slug={project.slug}
+              coverImage={project.data.coverImage}
+              thumbBg={project.data.thumbBg}
+            />
+          ))}
+        </div>
+      </section>
+
+      <!-- Build -->
+      <section class="section">
+        <hr />
+        <h2>Build</h2>
+        <ul class="build-list">
+          {build.map((item) => (
+            <li>
+              <a href={item.url} target="_blank" rel="noopener noreferrer">
+                <span class="build-name">{item.name}—</span>
+                <span class="build-desc">{item.description}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <!-- Experience -->
+      <section class="section">
+        <hr />
+        <h2>Experience</h2>
+        <div class="exp-rows">
+          {experience.map((item) => (
+            <div class="exp-row">
+              <p class="exp-date">{item.dates}</p>
+              <div class="exp-body">
+                <p class="exp-role">{item.role}</p>
+                <p class="exp-desc">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Writing -->
+      <section class="section">
+        <hr />
+        <h2>Writing</h2>
+        <div class="article-rows">
+          {articles.map((article) => (
+            <a href={`/articles/${article.slug}`} class="article-row">
+              <p class="article-date">{formatArticleDate(article.data.date)}</p>
+              <p class="article-title">
+                {article.data.category && (
+                  <span class="article-tag">{article.data.category}—</span>
+                )}
+                <span class="article-rest">{article.data.title}</span>
+              </p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <hr />
+        <p>Antonio Almeida &copy; 2026</p>
+      </footer>
+    </main>
+  </div>
+
+  <div class="accent accent--bottom" aria-hidden="true"></div>
+</Base>
+
+<script>
+  const EMAIL = 'me.antonio7@gmail.com';
+
+  function copyEmail() {
+    navigator.clipboard.writeText(EMAIL).catch(() => {});
+  }
+
+  document.getElementById('email-copy')?.addEventListener('click', copyEmail);
+  document.getElementById('email-nav')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    copyEmail();
+  });
+</script>
+
+<style>
+  /* ── Accent lines ─────────────────────────────── */
+  .accent {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-accent);
+    z-index: 100;
+  }
+  .accent--top { top: 0; }
+  .accent--bottom { bottom: 0; }
+
+  /* ── Page container ───────────────────────────── */
+  .page {
+    position: relative;
+    max-width: var(--layout-width);
+    margin: 0 auto;
+    padding: var(--section-gap) 0 var(--section-gap);
+  }
+
+  /* ── Nav ──────────────────────────────────────── */
+  nav {
+    position: absolute;
+    top: var(--section-gap);
+    right: 0;
+    display: flex;
+    gap: var(--col-gap);
+  }
+
+  nav a {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-regular);
+    font-size: 20px;
+    line-height: 1.8;
+    text-decoration: none;
+    color: var(--color-fg);
+    cursor: pointer;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* ── Main ─────────────────────────────────────── */
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-gap);
+  }
+
+  /* ── Hero ─────────────────────────────────────── */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: var(--row-gap);
+  }
+
+  .hero-identity {
+    display: flex;
+    flex-direction: column;
+    gap: var(--row-gap);
+  }
+
+  .hero-name {
+    font-family: var(--font-sans);
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--color-fg);
+  }
+
+  .name {
+    font-weight: var(--weight-medium);
+  }
+
+  .title {
+    font-weight: var(--weight-regular);
+  }
+
+  .profile-photo {
+    width: 144px;
+    height: 144px;
+    border-radius: 800px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h1 {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-medium);
+    font-size: 44px;
+    line-height: 1.1;
+    color: var(--color-fg);
+    max-width: var(--content-width);
+  }
+
+  .hero-body {
+    font-family: var(--font-serif);
+    font-weight: var(--weight-regular);
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--color-fg);
+    max-width: var(--content-width);
+  }
+
+  .email-cta {
+    font-family: var(--font-serif);
+    font-weight: var(--weight-regular);
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--color-fg);
+  }
+
+  .copy-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  /* ── Sections ─────────────────────────────────── */
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-gap);
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--color-divider);
+    margin: 0;
+  }
+
+  h2 {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-medium);
+    font-size: 28px;
+    line-height: normal;
+    color: var(--color-fg);
+  }
+
+  /* ── Projects grid ────────────────────────────── */
+  .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--section-gap) var(--col-gap);
+    max-width: var(--content-width);
+  }
+
+  /* ── Build ────────────────────────────────────── */
+  .build-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--row-gap);
+    max-width: 640px;
+  }
+
+  .build-list li {
+    position: relative;
+  }
+
+  .build-list li::before {
+    content: '';
+    position: absolute;
+    inset-block: -8px;
+    left: calc((var(--layout-width) - 100vw) / 2);
+    width: 100vw;
+    background: var(--color-hover-bg);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+  }
+
+  .build-list li:hover::before {
+    opacity: 1;
+  }
+
+  .build-list a {
+    font-family: var(--font-sans);
+    font-size: 20px;
+    line-height: 1.8;
+    text-decoration: none;
+    color: var(--color-fg);
+  }
+
+
+  .build-name {
+    font-weight: var(--weight-medium);
+  }
+
+  .build-desc {
+    font-weight: var(--weight-regular);
+  }
+
+  /* ── Experience ───────────────────────────────── */
+  .exp-rows {
+    display: flex;
+    flex-direction: column;
+    gap: var(--row-gap);
+    max-width: var(--content-width);
+  }
+
+  .exp-row {
+    display: flex;
+    gap: var(--col-gap);
+    align-items: flex-start;
+  }
+
+  .exp-date {
+    flex-shrink: 0;
+    width: 128px;
+    padding-top: 4px;
+    font-family: var(--font-sans);
+    font-weight: var(--weight-regular);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-fg);
+  }
+
+  .exp-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .exp-role {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-medium);
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--color-fg);
+  }
+
+  .exp-desc {
+    font-family: var(--font-serif);
+    font-weight: var(--weight-regular);
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--color-fg);
+  }
+
+  /* ── Writing ──────────────────────────────────── */
+  .article-rows {
+    display: flex;
+    flex-direction: column;
+    gap: var(--row-gap);
+  }
+
+  .article-row {
+    position: relative;
+    display: flex;
+    gap: var(--col-gap);
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-fg);
+    max-width: 800px;
+  }
+
+  .article-row::before {
+    content: '';
+    position: absolute;
+    inset-block: -8px;
+    left: calc((var(--layout-width) - 100vw) / 2);
+    width: 100vw;
+    background: var(--color-hover-bg);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+  }
+
+  .article-row:hover::before {
+    opacity: 1;
+  }
+
+  .article-date {
+    flex-shrink: 0;
+    width: 128px;
+    padding: 4px 8px;
+    font-family: var(--font-sans);
+    font-weight: var(--weight-regular);
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .article-title {
+    font-family: var(--font-sans);
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  .article-tag {
+    font-weight: var(--weight-medium);
+  }
+
+  .article-rest {
+    font-weight: var(--weight-regular);
+  }
+
+  /* ── Footer ───────────────────────────────────── */
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-gap);
+  }
+
+  footer p {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-regular);
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--color-fg);
+  }
+</style>
