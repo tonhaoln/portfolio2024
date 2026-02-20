@@ -4,7 +4,7 @@ description: 'Redesigned 100+ employer profiles around what job seekers actually
 intro: '100+ employer profiles, all with different content. One template that had to make the right information effortless to find.'
 outcome: '275% increase in organic traffic.'
 date: '2023-06-01'
-url: 'https://work180.com/en-au/for-women/employer/work180'
+url: ''
 thumbBg: '#BEDEAF'
 tags: ['ux', 'design']
 ---
@@ -25,7 +25,7 @@ The data showed two things clearly: Flexible Working and Shared Caring Responsib
 
 The centrepiece was the Equity Board — spreadsheet data turned into a consumer-facing experience with a mobile-first focus, evolved from early wireframes through team feedback. I built a component system that kept every profile cohesive regardless of how much content an employer had to share.
 
-<video src="/video/w180-flow-1.mp4" autoplay muted loop playsinline></video>
+<video src="/video/w180-video-1.mp4" autoplay muted loop playsinline></video>
 
 ## Outcome
 

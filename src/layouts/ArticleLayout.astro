@@ -95,7 +95,7 @@ const moreArticles = allArticles
     position: relative;
     max-width: var(--layout-width);
     margin: 0 auto;
-    padding: var(--section-gap) 0;
+    padding: var(--section-gap) var(--page-padding);
   }
 
   /* ── Hero ─────────────────────────────────────── */
@@ -187,8 +187,9 @@ const moreArticles = allArticles
     margin: var(--section-gap) 0;
   }
 
-  /* Full-width images */
-  .content :global(p:has(> img)) {
+  /* Full-width images and video */
+  .content :global(p:has(> img)),
+  .content :global(p:has(> video)) {
     max-width: 100%;
     margin-bottom: 0;
   }
@@ -210,6 +211,7 @@ const moreArticles = allArticles
     display: flex;
     flex-direction: column;
     gap: var(--section-gap);
+    margin-top: var(--section-gap);
   }
 
   hr {
@@ -242,7 +244,7 @@ const moreArticles = allArticles
     content: '';
     position: absolute;
     inset-block: -8px;
-    left: calc((var(--layout-width) - 100vw) / 2);
+    left: min(calc((var(--layout-width) - 100vw) / 2 - var(--page-padding)), calc(-1 * var(--page-padding)));
     width: 100vw;
     background: var(--color-hover-bg);
     z-index: -1;
@@ -268,6 +270,19 @@ const moreArticles = allArticles
 
   .more-title {
     font-weight: var(--weight-regular);
+  }
+
+  /* ── Mobile ───────────────────────────────────── */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 32px;
+    }
+
+    .content :global(blockquote),
+    .content :global(blockquote p) {
+      font-size: 22px;
+    }
+
   }
 
   /* ── Footer ───────────────────────────────────── */

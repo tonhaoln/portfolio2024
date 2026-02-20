@@ -30,14 +30,13 @@ const bg = thumbBg ?? 'var(--color-divider)';
 
 <style>
   .project-card {
-    width: 384px;
-    flex-shrink: 0;
+    width: calc((var(--content-width) - var(--col-gap)) / 2);
   }
 
   .card-link {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: var(--col-gap);
     text-decoration: none;
     color: inherit;
   }
@@ -45,9 +44,8 @@ const bg = thumbBg ?? 'var(--color-divider)';
   .thumb {
     position: relative;
     width: 100%;
-    height: 216px;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
-    border-radius: 4px;
   }
 
   .thumb img {
@@ -61,7 +59,7 @@ const bg = thumbBg ?? 'var(--color-divider)';
   .body {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--item-gap);
   }
 
   h3 {
@@ -75,7 +73,6 @@ const bg = thumbBg ?? 'var(--color-divider)';
   .content {
     display: flex;
     flex-direction: column;
-    gap: 0;
     align-items: flex-start;
   }
 
@@ -95,5 +92,11 @@ const bg = thumbBg ?? 'var(--color-divider)';
     line-height: 1.8;
     color: var(--color-accent);
     border-bottom: 1px solid var(--color-accent);
+  }
+
+  @media (max-width: 768px) {
+    .project-card {
+      width: 100%;
+    }
   }
 </style>

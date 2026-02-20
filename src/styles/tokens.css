@@ -16,9 +16,18 @@
   --color-accent: #DB2223;
 
   /* Layout */
-  --layout-width: 1208px;
+  --layout-width: 1248px;
   --content-width: 792px;
   --section-gap: 56px;
   --row-gap: 32px;
   --col-gap: 24px;
+  --item-gap: 16px;
+  --page-padding: 20px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-gap: 40px;
+    --row-gap: 24px;
+  }
 }
