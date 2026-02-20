@@ -3,21 +3,28 @@
 
 <nav>
   <a href="https://www.linkedin.com/in/antonioal/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+      <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"/>
     </svg>
   </a>
-  <button id="email-nav" aria-label="Copy email address">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <rect x="2" y="4" width="20" height="16" rx="2"/>
-      <path d="M2 7l10 7 10-7"/>
-    </svg>
-  </button>
+  <div class="email-wrap">
+    <button id="email-nav" aria-label="Copy email address">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+        <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/>
+      </svg>
+    </button>
+    <span class="copied-bubble" id="copied-bubble">Copied</span>
+  </div>
 </nav>
 
 <script>
   document.getElementById('email-nav')?.addEventListener('click', () => {
     navigator.clipboard.writeText('me.antonio7@gmail.com').catch(() => {});
+    const bubble = document.getElementById('copied-bubble');
+    if (!bubble) return;
+    bubble.classList.remove('show');
+    void bubble.offsetWidth; // reflow to restart animation
+    bubble.classList.add('show');
   });
 </script>
 
@@ -27,7 +34,7 @@
     top: var(--section-gap);
     right: var(--page-padding);
     display: flex;
-    gap: var(--col-gap);
+    gap: 16px;
     align-items: center;
   }
 
@@ -35,19 +42,48 @@
   nav button {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
     color: var(--color-fg);
     cursor: pointer;
+    background: var(--color-hover-bg);
   }
 
   nav button {
-    background: none;
     border: none;
     padding: 0;
   }
 
-  nav a:hover,
-  nav button:hover {
-    opacity: 0.5;
+  .email-wrap {
+    position: relative;
   }
 
+  .copied-bubble {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-fg);
+    color: var(--color-bg);
+    font-family: var(--font-sans);
+    font-weight: var(--weight-regular);
+    font-size: 13px;
+    line-height: 1;
+    padding: 6px 10px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .copied-bubble.show {
+    animation: bubble 1.8s ease forwards;
+  }
+
+  @keyframes bubble {
+    0%   { opacity: 0; transform: translateX(-50%) translateY(4px); }
+    15%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+    70%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-4px); }
+  }
 </style>
