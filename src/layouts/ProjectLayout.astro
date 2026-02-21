@@ -224,6 +224,17 @@ const moreProjects = allProjects
     margin-top: var(--section-gap);
   }
 
+  /* Image after blockquote: blockquote already has section-gap bottom */
+  .content :global(blockquote + p:has(> img)),
+  .content :global(blockquote + p:has(> video)) {
+    margin-top: 0;
+  }
+
+  /* Text after list */
+  .content :global(ul + p) {
+    margin-top: var(--section-gap);
+  }
+
   /* Pull quotes — use > blockquote in Markdown */
   .content :global(blockquote) {
     margin: var(--section-gap) 0;
@@ -243,6 +254,10 @@ const moreProjects = allProjects
     font-size: 28px;
     line-height: 1.3;
     max-width: var(--content-width);
+  }
+
+  .content :global(blockquote:last-child) {
+    margin-bottom: 0;
   }
 
   .content :global(img),

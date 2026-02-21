@@ -177,6 +177,10 @@ const moreArticles = allArticles
     max-width: var(--content-width);
   }
 
+  .content :global(blockquote:last-child) {
+    margin-bottom: 0;
+  }
+
   /* Dividers between sections — use --- in Markdown */
   .content :global(hr) {
     border: none;
@@ -195,6 +199,12 @@ const moreArticles = allArticles
   .content :global(p:has(> img) + p),
   .content :global(p:has(> video) + p) {
     margin-top: var(--section-gap);
+  }
+
+  /* Image after blockquote: blockquote already has section-gap bottom */
+  .content :global(blockquote + p:has(> img)),
+  .content :global(blockquote + p:has(> video)) {
+    margin-top: 0;
   }
 
   .content :global(img),
