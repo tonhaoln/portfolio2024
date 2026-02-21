@@ -173,7 +173,6 @@ const moreProjects = allProjects
   .content {
     display: flex;
     flex-direction: column;
-    margin-top: var(--section-gap);
   }
 
   /* Each h2 becomes a section: divider line + 56px breathing room to the heading text */
@@ -223,6 +222,27 @@ const moreProjects = allProjects
   .content :global(p:has(> img) + p),
   .content :global(p:has(> video) + p) {
     margin-top: var(--section-gap);
+  }
+
+  /* Pull quotes — use > blockquote in Markdown */
+  .content :global(blockquote) {
+    margin: var(--section-gap) 0;
+    padding: 0;
+    border: none;
+    font-family: var(--font-sans);
+    font-weight: var(--weight-medium);
+    font-size: 28px;
+    line-height: 1.3;
+    color: var(--color-fg);
+    max-width: var(--content-width);
+  }
+
+  .content :global(blockquote p) {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-medium);
+    font-size: 28px;
+    line-height: 1.3;
+    max-width: var(--content-width);
   }
 
   .content :global(img),
@@ -340,6 +360,11 @@ const moreProjects = allProjects
   @media (max-width: 768px) {
     h1 {
       font-size: 32px;
+    }
+
+    .content :global(blockquote),
+    .content :global(blockquote p) {
+      font-size: 22px;
     }
 
     .outcome {
