@@ -3,10 +3,9 @@ title: 'POD Combined'
 description: '305 users in first 2 months. Built solo in 3 weeks.'
 intro: "I rebuilt this three times before it worked. The fix wasn't better code, it was better constraints."
 outcome: '305 users in first 2 months.'
-date: '2024-06-01'
+date: '2025-03-01'
 url: 'https://www.podcombined.com'
 coverImage: '/images/pod-thumb.png'
-tags: ['build', 'product']
 ---
 
 ## The Product

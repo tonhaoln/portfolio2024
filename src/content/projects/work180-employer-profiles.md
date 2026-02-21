@@ -3,10 +3,8 @@ title: 'Work180: Employer profiles'
 description: 'Redesigned 100+ employer profiles around what job seekers actually cared about. 275% increase in organic traffic.'
 intro: '100+ employer profiles, all with different content. One template that had to make the right information effortless to find.'
 outcome: '275% increase in organic traffic.'
-date: '2023-06-01'
-url: ''
+date: '2025-04-01'
 coverImage: '/images/w180-thumb.png'
-tags: ['ux', 'design']
 ---
 
 ## Context

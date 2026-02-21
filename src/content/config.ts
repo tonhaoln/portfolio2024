@@ -9,7 +9,6 @@ const projects = defineCollection({
     outcome: z.string(),        // bold stat line in hero
     date: z.coerce.date(),
     url: z.string().optional(),
-    tags: z.array(z.string()).optional(),
     coverImage: z.string().optional(),
   }),
 });
@@ -21,7 +20,6 @@ const articles = defineCollection({
     description: z.string(),
     date: z.coerce.date(),
     category: z.string().optional(), // bold prefix in writing list e.g. "Design diary"
-    tags: z.array(z.string()).optional(),
   }),
 });
 
