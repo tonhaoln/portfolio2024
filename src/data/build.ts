@@ -7,7 +7,7 @@ export interface BuildItem {
 export const build: BuildItem[] = [
   {
     name: 'AI Patterns',
-    description: 'A catalogue of 16 named AI design patterns and 8 laws.',
+    description: 'A pattern catalogue for working with AI.',
     url: 'https://ai-patterns.antoniodesign.work/',
   },
   {

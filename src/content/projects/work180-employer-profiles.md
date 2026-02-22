@@ -4,15 +4,15 @@ description: '275% increase in organic traffic. 100+ employer profiles redesigne
 intro: '100+ employer profiles, all with different content. One template that had to make the right information effortless to find.'
 outcome: '275% increase in organic traffic.'
 date: '2025-04-01'
-url: 'https://work180.com/en-au/for-women/employer/work180'
 coverImage: '/images/w180-thumb.png'
 ---
+
+![Work180 employer profile — before](/images/w180-img-1.png)
 
 ## Context
 
 WORK180 helps women find workplaces that actually support them. Over 100 endorsed employers, including Microsoft, BHP, and Atlassian, needed a better way to communicate workplace policies to job seekers. The existing template was burying the information that mattered most.
 
-![Work180 employer profile — before](/images/w180-img-1.png)
 
 ## Research
 
