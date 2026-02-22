@@ -31,6 +31,6 @@ Mid-build, clinical feedback showed the original tooth-by-tooth input was too sl
 
 ## The Build
 
-~50 hours from first meeting to live. I structured the development around product context, UI system, user flows, and task plans, then used AI to accelerate the build within those guardrails. Next.js, Supabase, TypeScript, deployed on Vercel.
+~50 hours from first meeting to live. I defined the product context and user flows first, then used AI to accelerate the build within those guardrails. Next.js, Supabase, TypeScript, deployed on Vercel.
 
 > Now being tested in a real clinical setting and capturing feedback for the next phase.

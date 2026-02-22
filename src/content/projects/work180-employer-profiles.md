@@ -16,7 +16,7 @@ WORK180 helps women find workplaces that actually support them. Over 100 endorse
 
 ## Research
 
-I led UX at WORK180 for close to two years, working alongside a Head of Product, Head of Engineering, two PMs, a Data Analyst, and four Engineers. I ran internal and external surveys and usability testing on wireframe prototypes with real users. Those findings shaped everything that followed.
+I led UX at WORK180 for close to two years. Ran surveys, usability testing on wireframe prototypes with real users. Those findings shaped everything that followed.
 
 > The data showed two things clearly: Flexible Working and Shared Caring Responsibility were what users cared about most.
 
