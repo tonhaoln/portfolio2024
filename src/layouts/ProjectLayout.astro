@@ -57,8 +57,7 @@ const moreProjects = allProjects
               {moreProjects.map((p) => (
                 <li>
                   <a href={`/project/${p.slug}`}>
-                    <span class="more-name">{p.data.title}—</span>
-                    <span class="more-desc">{p.data.description}</span>
+                    <span class="more-name">{p.data.title}—</span><span class="more-desc">{p.data.description}</span>
                   </a>
                 </li>
               ))}

@@ -77,8 +77,7 @@ function formatArticleDate(date: Date): string {
           {build.map((item) => (
             <li>
               <a href={item.url} target="_blank" rel="noopener noreferrer">
-                <span class="build-name">{item.name}—</span>
-                <span class="build-desc">{item.description}</span>
+                <span class="build-name">{item.name}—</span><span class="build-desc">{item.description}</span>
               </a>
             </li>
           ))}
@@ -110,12 +109,7 @@ function formatArticleDate(date: Date): string {
           {articles.map((article) => (
             <a href={`/articles/${article.slug}`} class="article-row">
               <p class="article-date">{formatArticleDate(article.data.date)}</p>
-              <p class="article-title">
-                {article.data.category && (
-                  <span class="article-tag">{article.data.category}—</span>
-                )}
-                <span class="article-rest">{article.data.title}</span>
-              </p>
+              <p class="article-title">{article.data.category && (<span class="article-tag">{article.data.category}—</span>)}<span class="article-rest">{article.data.title}</span></p>
             </a>
           ))}
         </div>
