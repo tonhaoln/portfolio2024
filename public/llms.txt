@@ -10,9 +10,21 @@ My work starts with figuring out what to build. I've been building products solo
 - [Projects](https://www.antoniodesign.work/project/): Selected client and product work.
 - [Articles](https://www.antoniodesign.work/articles/): Writing on design, product, and building with AI.
 
+## Projects
+
+- Work180: Employer profiles — 275% increase in organic traffic. 100+ employer profiles redesigned.
+- POD Combined — 305 users in 2 months. Built solo in 3 weeks. Rebuilt three times before it worked.
+- OzHarvest: Annual Report — Three annual reports and counting. Australia's largest food rescue organisation.
+- SmileScore: Clinical MVP — 65+ data points on paper. One iPhone, one hand, chair-side.
+
+## Build
+
+- AI Patterns — A catalogue of 16 named AI design patterns and 8 laws.
+- aweekend — A quick estimate for the SaaS build-or-replace decision.
+
 ## Background
 
-Currently Lead Designer & Developer at Emptyhead Digital, delivering end-to-end for major Australian organisations. Previously Senior UX Designer at WORK180, Lead Designer & Developer at ACMN, and Digital Designer at The Sydney Morning Herald.
+Currently Lead Designer & Developer at Emptyhead Digital, delivering end-to-end for organisations including OzHarvest, Australian Youth Orchestra, and MJ: The Musical. Previously Senior UX Designer at WORK180, Lead Digital Designer & Frontend Developer at ACMN, and Digital Designer at Fairfax Media.
 
 ## Contact
 
