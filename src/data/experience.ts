@@ -1,31 +1,36 @@
 export interface ExperienceItem {
   dates: string;
-  role: string;
+  position: string;
+  workplace: string;
   description: string;
 }
 
 export const experience: ExperienceItem[] = [
   {
     dates: '2024 – Now',
-    role: 'Emptyhead Digital—Lead Designer & Developer',
+    position: 'Lead Designer & Developer',
+    workplace: 'Emptyhead Digital',
     description:
-      'End-to-end delivery for major Australian organisations. From early definition to shipped product.',
+      'End-to-end delivery for organisations including OzHarvest, Australian Youth Orchestra, and MJ: The Musical. From early definition to shipped product.',
   },
   {
     dates: '2021 – 2023',
-    role: 'WORK180—Senior UX Designer',
+    position: 'Senior UX Designer',
+    workplace: 'WORK180',
     description:
-      'Platform features and design system across a job-search platform. 275% organic traffic increase across 100+ employer profiles.',
+      'Platform features and design system. 275% organic traffic increase across 100+ employer profiles.',
   },
   {
     dates: '2014 – 2021',
-    role: 'ACMN—Lead Designer & Developer',
+    position: 'Lead Digital Designer & Frontend Developer',
+    workplace: 'ACMN',
     description:
-      'Digital platforms for 50+ live event brands across Australia and New Zealand.',
+      'Large-scale live event brands across Australia and New Zealand, including The Book of Mormon Musical, CATS, and Sydney Festival.',
   },
   {
     dates: '2013 – 2014',
-    role: 'Digital Designer',
+    position: 'Digital Designer',
+    workplace: 'Fairfax Media',
     description:
       'National campaigns for The Sydney Morning Herald, The Age, and the Australian Financial Review.',
   },

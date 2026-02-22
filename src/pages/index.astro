@@ -94,7 +94,7 @@ function formatArticleDate(date: Date): string {
             <div class="exp-row">
               <p class="exp-date">{item.dates}</p>
               <div class="exp-body">
-                <p class="exp-role">{item.role}</p>
+                <p class="exp-role"><span class="exp-position">{item.position}—</span><span class="exp-workplace">{item.workplace}</span></p>
                 <p class="exp-desc">{item.description}</p>
               </div>
             </div>
@@ -354,10 +354,17 @@ function formatArticleDate(date: Date): string {
 
   .exp-role {
     font-family: var(--font-sans);
-    font-weight: var(--weight-medium);
     font-size: 20px;
     line-height: 1.8;
     color: var(--color-fg);
+  }
+
+  .exp-position {
+    font-weight: var(--weight-medium);
+  }
+
+  .exp-workplace {
+    font-weight: var(--weight-regular);
   }
 
   .exp-desc {

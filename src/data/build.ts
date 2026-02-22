@@ -11,8 +11,8 @@ export const build: BuildItem[] = [
     url: 'https://ai-patterns.antoniodesign.work/',
   },
   {
-    name: 'Build vs. Buy',
-    description: 'A calculator for the SaaS build-or-keep decision.',
-    url: '#', // replace with live URL
+    name: 'aweekend',
+    description: 'A quick estimate for the SaaS build-or-replace decision.',
+    url: 'https://aweekend.antoniodesign.work/',
   },
 ];
