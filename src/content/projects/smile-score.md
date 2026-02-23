@@ -5,6 +5,7 @@ intro: "A scoring methodology run manually with pen, paper, and mental maths. Th
 outcome: '65+ clinical data points on paper. Turned into a product a practitioner could use mid-exam.'
 date: '2025-01-01'
 coverImage: '/images/smile-thumb.png'
+ogImage: '/images/smile-og.jpg'
 ---
 
 <video src="/video/smile-video-1.mp4" autoplay muted loop playsinline></video>

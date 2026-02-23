@@ -6,6 +6,7 @@ outcome: "Australia's largest food rescue organisation."
 date: '2025-02-01'
 url: 'https://2024impactreport.ozharvest.org/'
 coverImage: '/images/oz-thumb.png'
+ogImage: '/images/oz-og.jpg'
 ---
 
 <video src="/video/oz-video-2.mp4" autoplay muted loop playsinline></video>

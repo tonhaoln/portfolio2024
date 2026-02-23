@@ -5,6 +5,7 @@ intro: '100+ employer profiles, all with different content. One template that ha
 outcome: '275% increase in organic traffic.'
 date: '2025-04-01'
 coverImage: '/images/w180-thumb.png'
+ogImage: '/images/w180-og.jpg'
 ---
 
 ![Work180 employer profile — before](/images/w180-img-1.png)

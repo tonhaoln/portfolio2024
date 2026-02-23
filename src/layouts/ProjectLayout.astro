@@ -10,9 +10,10 @@ interface Props {
   outcome: string;
   slug: string;
   url?: string;
+  ogImage?: string;
 }
 
-const { title, description, intro, outcome, slug, url } = Astro.props;
+const { title, description, intro, outcome, slug, url, ogImage } = Astro.props;
 
 const allProjects = await getCollection('projects');
 const moreProjects = allProjects
@@ -20,7 +21,7 @@ const moreProjects = allProjects
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
-<Base title={`${title} — Antonio Almeida`} description={description} ogType="article">
+<Base title={`${title} — Antonio Almeida`} description={description} ogType="article" ogImage={ogImage}>
   <div class="accent accent--top" aria-hidden="true"></div>
 
   <div class="page">

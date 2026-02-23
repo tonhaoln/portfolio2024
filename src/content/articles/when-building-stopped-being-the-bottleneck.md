@@ -1,8 +1,9 @@
 ---
 title: 'When building stopped being the bottleneck'
 description: 'AI lowered the cost of building. It did not lower the cost of owning what you build.'
-date: '2026-02-06'
+date: '2026-02-23'
 category: 'On building'
+ogImage: '/images/aweekend-og.jpg'
 ---
 
 I ignored the clone-this-SaaS posts for a while. You know the ones: screenshots of revenue dashboards, threads about rebuilding tools with AI in a few hours, mostly clickbait.

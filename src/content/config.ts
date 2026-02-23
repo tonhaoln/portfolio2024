@@ -10,6 +10,7 @@ const projects = defineCollection({
     date: z.coerce.date(),
     url: z.string().optional(),
     coverImage: z.string().optional(),
+    ogImage: z.string().optional(),
   }),
 });
 
@@ -20,6 +21,7 @@ const articles = defineCollection({
     description: z.string(),
     date: z.coerce.date(),
     category: z.string().optional(), // bold prefix in writing list e.g. "Design diary"
+    ogImage: z.string().optional(),
   }),
 });
 

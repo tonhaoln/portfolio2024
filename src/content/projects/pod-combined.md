@@ -6,6 +6,7 @@ outcome: '305 users in first 2 months. Built solo in 3 weeks.'
 date: '2025-03-01'
 url: 'https://www.podcombined.com'
 coverImage: '/images/pod-thumb.png'
+ogImage: '/images/pod-og.jpg'
 ---
 
 <video src="/video/pod-video-1.mp4" autoplay muted loop playsinline></video>
