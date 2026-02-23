@@ -9,9 +9,10 @@ interface Props {
   date: Date;
   slug: string;
   ogImage?: string;
+  category?: string;
 }
 
-const { title, description, date, slug, ogImage } = Astro.props;
+const { title, description, date, slug, ogImage, category } = Astro.props;
 
 const formattedDate = date.toLocaleDateString('en-AU', {
   day: 'numeric',
@@ -38,7 +39,7 @@ const moreArticles = allArticles
         <div class="hero">
           <a href="/" class="name-link">Antonio Almeida</a>
           <h1>{title}</h1>
-          <p class="date">{formattedDate}</p>
+          <p class="date">{category && (<span class="category">{category}—</span>)}{formattedDate}</p>
         </div>
 
         <!-- Markdown content -->
@@ -133,6 +134,10 @@ const moreArticles = allArticles
     font-size: 20px;
     line-height: 1.3;
     color: var(--color-fg);
+  }
+
+  .category {
+    font-weight: var(--weight-medium);
   }
 
   /* ── Content (Markdown) ───────────────────────── */
