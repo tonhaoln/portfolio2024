@@ -18,11 +18,11 @@ The first prototype came fast. One conversation with Claude, one file, working U
 
 Then I started actually looking at it.
 
-The typography had eight different font sizes with no consistent scale. Half the interface failed WCAG AA contrast ratios — 17 failures across labels, helper text, and verdict copy. The value proposition didn't hold either. I was trying to give users an exact number, but the variables were too squishy: complexity, hourly rate, maintenance costs. The precision was false confidence dressed as a calculation.
+![Screenshot of early prototype showing contrast audit failures](/images/aweekend-img-2.png)
+
+The typography had eight different font sizes with no consistent scale. Half the interface failed WCAG AA contrast ratios. 17 failures across labels, helper text, and verdict copy. The value proposition didn't hold either. I was trying to give users an exact number, but the variables were too squishy: complexity, hourly rate, maintenance costs. The precision was false confidence dressed as a calculation.
 
 That was the real design problem. Not the colours. Not the type scale. The tool was framed as a calculator when it should have been a conversation starter.
-
-![Screenshot of early prototype showing contrast audit failures](/images/aweekend-img-2.png)
 
 > Execution got cheaper, but ownership didn't.
 
