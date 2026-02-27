@@ -7,7 +7,7 @@ export interface BuildItem {
 export const build: BuildItem[] = [
   {
     name: 'AI Patterns',
-    description: 'Sixteen named patterns for building products with LLMs.',
+    description: 'Sixteen named patterns for working with AI.', 
     url: 'https://ai-patterns.antoniodesign.work/',
   },
   {
