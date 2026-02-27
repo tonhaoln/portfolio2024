@@ -1,40 +1,50 @@
 ---
 title: 'Work180: Employer profiles'
-description: '275% increase in organic traffic. 100+ employer profiles redesigned.'
-intro: '100+ employer profiles, all with different content. One template that had to make the right information effortless to find.'
+description: "The Equity Board had a name. Nobody knew what it should look like."
+intro: "The Equity Board had a name. Nobody knew what it should look like."
 outcome: '275% increase in organic traffic.'
 date: '2025-04-01'
 coverImage: '/images/w180-thumb.png'
 ogImage: '/images/w180-og.jpg'
 ---
 
-![Work180 employer profile — before](/images/w180-img-1.png)
+![Work180 employer profile](/images/w180-img-1.png)
 
 ## Context
 
-WORK180 helps women find workplaces that actually support them. Over 100 endorsed employers, including Microsoft, BHP, and Atlassian, needed a better way to communicate workplace policies to job seekers. The existing template was burying the information that mattered most.
+WORK180 helps women find workplaces that actually support them. Over 100 endorsed employers — Microsoft, BHP, Atlassian — had their policies on the platform. The existing template was burying the information that mattered most.
 
+The profile redesign had a centrepiece: the Equity Board. What it was, what it looked like, how someone would actually use it: still open. No one had a clear picture. I joined as the team was trying to make it one.
 
 ## Research
 
-I led UX at WORK180 for close to two years. Ran surveys, usability testing on wireframe prototypes with real users. Those findings shaped everything that followed.
+A workshop with the team first. Everyone drew their version of what the Equity Board could be. No existing visuals, no brief beyond the question. Those drawings became the starting point.
 
-> The data showed two things clearly: Flexible Working and Shared Caring Responsibility were what users cared about most.
+The first wireframes went to the whole company: a vision, not a proposal.
 
-So instead of giving every policy equal weight, I designed the template to lead with what mattered, making the most sought-after information the easiest to find.
+> The wireframes were the first time anyone had seen it. It started the conversation.
 
 <video src="/video/w180-video-1.mp4" autoplay muted loop playsinline></video>
 
+Wireframes into a clickable prototype, then to real users. Two things came back above everything else: Flexible Working and Shared Caring Responsibility.
+
+The profile template was redesigned around them.
+
+
 ## The Build
 
-The centrepiece was the Equity Board — spreadsheet data turned into a consumer-facing experience with a mobile-first focus, evolved from early wireframes through team feedback. I built a component system that kept every profile cohesive regardless of how much content an employer had to share.
+The Equity Board: 10 tabs, left-hand navigation, content on the right. Two flows: free and gated. Research decided which policies stayed open and which sat behind a signup.
 
-![Work180 component system](/images/w180-img-3.png)
+> Research decided which policies stayed open. Flexible working: always visible.
+
+![Work180 — Equity Board](/images/w180-img-5.png)
+
+![Work180 — Equity Board](/images/w180-img-3.png)
 
 ## Outcome
 
-After launch, employer profiles saw a 275% increase in organic traffic.
+A new profile template held across 100+ employers. Different content, different volume. One component system, consistent brand either way.
 
-> The redesigned template was adopted across all endorsed employers.
+275% increase in organic traffic.
 
-![Work180 employer profiles — live](/images/w180-img-4.png)
+![Work180 — mobile](/images/w180-img-4.png)

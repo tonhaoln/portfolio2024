@@ -1,6 +1,6 @@
 ---
 title: 'OzHarvest: Annual Report'
-description: "Three annual reports and counting. Australia's largest food rescue organisation."
+description: "Same client. Same constraint. Three years, three different executions."
 intro: "Same content, same brand, but every year the client wanted a different experience. What stayed consistent was the principle underneath."
 outcome: "Australia's largest food rescue organisation."
 date: '2025-02-01'
@@ -13,7 +13,7 @@ ogImage: '/images/oz-og.jpg'
 
 ## Context
 
-OzHarvest is Australia's leading food rescue organisation. Every year they need their impact report to do more than list numbers. An engaging digital experience for stakeholders, partners, and donors.
+OzHarvest is Australia's leading food rescue organisation. Every year they need their impact report to do more than list numbers.
 
 I've designed and built this for three consecutive years (2023, 2024, 2025). Each year the client brings new references and feedback from the previous version. Same content, same branding, but a different experience every time.
 
@@ -25,7 +25,7 @@ I've designed and built this for three consecutive years (2023, 2024, 2025). Eac
 
 The layout changed every year. The underlying principle didn't: users scan, not read.
 
-Progressive disclosure became the constant — collapsible sections, clear typography, well-defined navigation. That held across all three designs. Everything else moved around it.
+The approach held every year: design for scanning, not reading. Everything else moved around that.
 
 > Redesigning, not iterating, worked because the principle was stable.
 

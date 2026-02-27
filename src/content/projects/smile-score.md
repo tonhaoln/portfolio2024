@@ -1,6 +1,6 @@
 ---
 title: 'SmileScore: Clinical MVP'
-description: '65+ data points on paper. One iPhone, one hand, chair-side.'
+description: "One hand. Sixty minutes. 65 clinical data points."
 intro: "A scoring methodology run manually with pen, paper, and mental maths. The challenge was making it work on an iPhone, one-handed, chair-side during a 60-minute appointment."
 outcome: '65+ clinical data points on paper. Turned into a product a practitioner could use mid-exam.'
 date: '2025-01-01'
@@ -32,6 +32,6 @@ Mid-build, clinical feedback showed the original tooth-by-tooth input was too sl
 
 ## The Build
 
-~50 hours from first meeting to live. I defined the product context and user flows first, then used AI to accelerate the build within those guardrails. Next.js, Supabase, TypeScript, deployed on Vercel.
+~50 hours from first meeting to live. I mapped the product logic and screens first. Then used AI to build within that structure. Next.js, Supabase, TypeScript, deployed on Vercel.
 
 > Now being tested in a real clinical setting and capturing feedback for the next phase.

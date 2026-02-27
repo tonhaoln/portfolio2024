@@ -11,7 +11,7 @@ export const experience: ExperienceItem[] = [
     position: 'Lead Designer & Developer',
     workplace: 'Emptyhead Digital',
     description:
-      'End-to-end delivery for organisations including OzHarvest, Australian Youth Orchestra, and MJ: The Musical. From early definition to shipped product.',
+      'End-to-end delivery for organisations including OzHarvest, Australian Youth Orchestra, and MJ: The Musical.',
   },
   {
     dates: '2021 – 2023',

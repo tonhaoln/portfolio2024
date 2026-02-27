@@ -1,6 +1,6 @@
 ---
 title: 'POD Combined'
-description: '305 users in 2 months. Built solo in 3 weeks. Rebuilt three times before it worked.'
+description: "Built it three times. Thought the problem was prompting. It wasn't."
 intro: "I rebuilt this three times before it worked. The fix wasn't better code, it was better constraints."
 outcome: '305 users in first 2 months. Built solo in 3 weeks.'
 date: '2025-03-01'
