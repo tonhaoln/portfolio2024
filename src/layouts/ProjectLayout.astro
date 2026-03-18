@@ -17,7 +17,7 @@ const { title, description, intro, outcome, slug, url, ogImage } = Astro.props;
 
 const allProjects = await getCollection('projects');
 const moreProjects = allProjects
-  .filter((p) => p.slug !== slug)
+  .filter((p) => p.id !== slug)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
@@ -57,7 +57,7 @@ const moreProjects = allProjects
             <ul>
               {moreProjects.map((p) => (
                 <li>
-                  <a href={`/project/${p.slug}`}>
+                  <a href={`/project/${p.id}`}>
                     <span class="more-name">{p.data.title}—</span><span class="more-desc">{p.data.description}</span>
                   </a>
                 </li>

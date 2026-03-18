@@ -60,7 +60,7 @@ function formatArticleDate(date: Date): string {
             <ProjectCard
               title={project.data.title}
               description={project.data.description}
-              slug={project.slug}
+              slug={project.id}
               coverImage={project.data.coverImage}
             />
           ))}
@@ -105,7 +105,7 @@ function formatArticleDate(date: Date): string {
         <h2>Writing</h2>
         <div class="article-rows">
           {articles.map((article) => (
-            <a href={`/articles/${article.slug}`} class="article-row">
+            <a href={`/articles/${article.id}`} class="article-row">
               <p class="article-date">{formatArticleDate(article.data.date)}</p>
               <p class="article-title">{article.data.category && (<span class="article-tag">{article.data.category}—</span>)}<span class="article-rest">{article.data.title}</span></p>
             </a>

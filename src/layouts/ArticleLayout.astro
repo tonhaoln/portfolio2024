@@ -22,7 +22,7 @@ const formattedDate = date.toLocaleDateString('en-AU', {
 
 const allArticles = await getCollection('articles');
 const moreArticles = allArticles
-  .filter((a) => a.slug !== slug)
+  .filter((a) => a.id !== slug)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
@@ -54,7 +54,7 @@ const moreArticles = allArticles
             <ul>
               {moreArticles.map((a) => (
                 <li>
-                  <a href={`/articles/${a.slug}`}>
+                  <a href={`/articles/${a.id}`}>
                     {a.data.category && (
                       <span class="more-category">{a.data.category}—</span>
                     )}
