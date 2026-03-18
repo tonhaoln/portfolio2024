@@ -3,7 +3,7 @@ title: "What's left when the code is automated"
 description: "Six commits and I haven't written a single line of code. The context building became the architecture."
 date: '2026-03-18'
 category: 'On building'
-ogImage: '/images/pod-img-1.png'
+ogImage: '/images/feb-og.png'
 ---
 
 By the literal definition, if you're prompting AI to write all the code, you're vibe coding.
