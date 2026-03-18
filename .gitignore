@@ -4,3 +4,6 @@ dist/
 .env
 .env.*
 !.env.example
+*.screenstudio/
+*.original.mp4
+.DS_Store
