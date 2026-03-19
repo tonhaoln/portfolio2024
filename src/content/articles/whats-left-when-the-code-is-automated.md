@@ -30,7 +30,7 @@ So yeah, I vibe coded it. But it wasn't prompt it, accept it, ship it. The conte
 
 Below I break down the build journey. I kept the details for my own reference, iteration on future builds, and hopefully to add value to other builders like me.
 
-Here's how it went building canvas mode for February, a local-first writing tool with silent Git versioning and AI chat.
+Here's how it went building canvas mode for [February](https://github.com/tonhaoln/february-os), a local-first writing tool with silent Git versioning and AI chat.
 
 ### The agent called it a second product
 
