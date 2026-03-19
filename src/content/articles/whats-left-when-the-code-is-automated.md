@@ -42,7 +42,9 @@ I pushed back on the pushback. If the canvas session produces a markdown file th
 
 > "Make sure we are not just compliant."
 
-The agent conceded, but I didn't just take the win. I pressure tested it: "Make sure we are not just compliant." I needed to know whether it actually changed its thinking or just folded. The decision felt real when it showed me what actually changed and how it understood what the canvas would produce. The cloud multiplayer infrastructure was still a concern, Next.js still wrong for the stack. But it got the core idea.
+The agent conceded, but I didn't just take the win. I pressure tested it: "Make sure we are not just compliant." I needed to know whether it actually changed its thinking or just folded. 
+
+The decision felt real when it showed me what actually changed and how it understood what the canvas would produce. The cloud multiplayer infrastructure was still a concern, Next.js still wrong for the stack. But it got the core idea.
 
 <video src="/video/feb-video-2.mp4" autoplay muted loop playsinline></video>
 
