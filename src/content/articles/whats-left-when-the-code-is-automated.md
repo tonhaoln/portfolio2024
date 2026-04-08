@@ -32,7 +32,7 @@ Below I break down the build journey. I kept the details for my own reference, i
 
 Here's how it went building canvas mode for [February](https://github.com/tonhaoln/february-os), a local-first writing tool with silent Git versioning and AI chat.
 
-### The agent called it a second product
+## The agent called it a second product
 
 The idea started in a brainstorm session with a different AI agent. That one suggested cloud multiplayer infrastructure, a different framework and real-time sync. All breaking my project's stack rules. It validated every step with no pushback on scope, stack or whether this was the right thing to build.
 
@@ -48,7 +48,7 @@ The decision felt real when it showed me what actually changed and how it unders
 
 <video src="/video/feb-video-2.mp4" autoplay muted loop playsinline></video>
 
-### A chatbot wearing a canvas costume
+## A chatbot wearing a canvas costume
 
 The first implementation had the agent dropping AI notes on the canvas in a column. They looked like chat responses arranged spatially. I thought: "that's not a thinking peer, that's a chatbot wearing a canvas costume."
 
@@ -60,7 +60,7 @@ That research changed the agent design from participant to facilitator. It stopp
 
 ![Placeholder: screenshot of the canvas agent behaving as facilitator with spatial notes](/images/feb-article-img-4.png)
 
-### Borrowing from Granola at the right time
+## Borrowing from Granola at the right time
 
 Then the session synthesis came up flat. The agent had it as a raw dump of sticky notes. Useful as a record, but not the point.
 
@@ -70,17 +70,17 @@ The timing of that wasn't random. It was knowing what to introduce, and when.
 
 ![Placeholder: screenshot of the Granola-style session synthesis output](/images/feb-article-img-5.png)
 
-### We over-engineered it
+## We over-engineered it
 
 With the agent redesigned and the synthesis reframed, the feature was working. So naturally, we started tweaking it. Example ratios, silence thresholds, timer values, to name a few. Every change swung the agent's behaviour from too chatty to too quiet and back again.
 
 I asked: "Are we over-engineering this?" We were. So we reverted to the post-research state. The original balance was right and every patch after made it worse.
 
-### The core value got deprioritised
+## The core value got deprioritised
 
 While continuing the build, the agent pushed session synthesis to "phase 2." I had to call it out. When a canvas session ends, the AI produces a structured summary of everything that happened. Your sticky notes are the spine, the AI fills in the themes and connections around them. That was the whole point of the feature, so I moved it back.
 
-### What was the work?
+## What was the work?
 
 Looking back, it's clear the code was automated but the work around it wasn't.
 
