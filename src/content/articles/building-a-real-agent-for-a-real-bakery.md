@@ -6,7 +6,7 @@ category: 'On agents'
 ogImage: '/images/mabel-og.jpg'
 ---
 
-Mabel is an artisan bakery in East Ballina, on the NSW North Coast. Josh, the owner, makes everything from sourdough to croissants to beef pies. Every week, the same decision: what to make, how many, and when.
+[Mabel](https://www.instagram.com/mabelbakery_/) is an artisan bakery in East Ballina, on the NSW North Coast. Josh, the owner, makes everything from sourdough to croissants to beef pies. Every week, the same decision: what to make, how many, and when.
 
 His words: _"The numbers are adjusted by a mix of data and feel."_
 
