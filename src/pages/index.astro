@@ -67,19 +67,18 @@ function formatArticleDate(date: Date): string {
         </div>
       </section>
 
-      <!-- Build -->
+      <!-- Writing -->
       <section class="section">
         <hr />
-        <h2>Builds</h2>
-        <ul class="build-list">
-          {build.map((item) => (
-            <li>
-              <a href={item.url} target="_blank" rel="noopener noreferrer">
-                <span class="build-name">{item.name}—</span><span class="build-desc">{item.description}</span>
-              </a>
-            </li>
+        <h2>Writing</h2>
+        <div class="article-rows">
+          {articles.map((article) => (
+            <a href={`/articles/${article.id}`} class="article-row">
+              <p class="article-date">{formatArticleDate(article.data.date)}</p>
+              <p class="article-title">{article.data.category && (<span class="article-tag">{article.data.category}—</span>)}<span class="article-rest">{article.data.title}</span></p>
+            </a>
           ))}
-        </ul>
+        </div>
       </section>
 
       <!-- Experience -->
@@ -99,18 +98,19 @@ function formatArticleDate(date: Date): string {
         </div>
       </section>
 
-      <!-- Writing -->
+      <!-- Build -->
       <section class="section">
         <hr />
-        <h2>Writing</h2>
-        <div class="article-rows">
-          {articles.map((article) => (
-            <a href={`/articles/${article.id}`} class="article-row">
-              <p class="article-date">{formatArticleDate(article.data.date)}</p>
-              <p class="article-title">{article.data.category && (<span class="article-tag">{article.data.category}—</span>)}<span class="article-rest">{article.data.title}</span></p>
-            </a>
+        <h2>Builds</h2>
+        <ul class="build-list">
+          {build.map((item) => (
+            <li>
+              <a href={item.url} target="_blank" rel="noopener noreferrer">
+                <span class="build-name">{item.name}—</span><span class="build-desc">{item.description}</span>
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       <!-- Footer -->
