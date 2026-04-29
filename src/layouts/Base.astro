@@ -7,6 +7,7 @@ interface Props {
   description: string;
   ogImage?: string;
   ogType?: 'website' | 'article';
+  markdownHref?: string;
 }
 
 const {
@@ -14,6 +15,7 @@ const {
   description,
   ogImage = '/images/og-default.jpg',
   ogType = 'website',
+  markdownHref,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -48,6 +50,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    {markdownHref && <link rel="alternate" type="text/markdown" href={markdownHref} />}
   </head>
   <body>
     <slot />

@@ -21,7 +21,7 @@ const moreProjects = allProjects
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
-<Base title={`${title} — Antonio Almeida`} description={description} ogType="article" ogImage={ogImage}>
+<Base title={`${title} — Antonio Almeida`} description={description} ogType="article" ogImage={ogImage} markdownHref={`/project/${slug}.md`}>
   <div class="accent accent--top" aria-hidden="true"></div>
 
   <div class="page">
